@@ -3,12 +3,12 @@
 window.AMT01_CONFIG = Object.freeze({
   links: {
     repository: {
-      enabled: false,
-      url: '',
+      enabled: true,
+      url: 'https://github.com/verbitski/amt-01-open-investigation',
       label: 'Open the GitHub project',
-      unavailableLabel: 'Repository not yet public',
+      unavailableLabel: 'GitHub project temporarily unavailable',
       availableNote: 'Opens the public AMT-01 repository in a new tab.',
-      unavailableNote: 'The repository link will appear here when the public release is ready.',
+      unavailableNote: 'The GitHub project is temporarily unavailable.',
       newTab: true
     },
     discussions: {
@@ -20,24 +20,13 @@ window.AMT01_CONFIG = Object.freeze({
       unavailableNote: 'The Discord invitation is temporarily unavailable.',
       newTab: true
     },
-    contribution: {
-      enabled: false,
-      url: '',
-      label: 'Choose a contribution type',
-      unavailableLabel: 'Contributions open with the repository',
-      availableNote: 'Uses a guided public template. Submissions are reviewed before entering the project record.',
-      unavailableNote: 'A contribution is reviewed before it enters the project record.',
-      newTab: true
-    },
     privateIntake: {
-      // Change this only after the privacy, consent, storage, retention,
-      // redaction, and takedown workflow has been reviewed and deployed.
-      enabled: false,
-      url: '',
-      label: 'Continue to private intake',
-      unavailableLabel: 'Not accepting personal reports yet',
-      availableNote: 'Separate from public discussion. Review the privacy and consent terms before sending anything.',
-      unavailableNote: 'Please do not send personal reports or media through public channels.',
+      enabled: true,
+      url: 'https://tally.so/r/5BgZMb',
+      label: 'Share an observation privately',
+      unavailableLabel: 'Private witness intake is temporarily unavailable',
+      availableNote: 'Opens the private witness intake form on Tally in a new tab. Review the consent and privacy information before sending.',
+      unavailableNote: 'Please do not send personal reports or media through public channels while the form is unavailable.',
       newTab: true
     }
   }

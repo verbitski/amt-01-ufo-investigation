@@ -228,7 +228,7 @@
   const communityHelpLabel = document.querySelector('[data-community-help-label]');
   const communityPublicWarning = document.querySelector('[data-community-public-warning]');
   const discussionsAreOpen = Boolean(linkAvailability.discussions);
-  const contributionsAreOpen = Boolean(linkAvailability.contribution);
+  const contributionsAreOpen = Boolean(linkAvailability.repository);
   const privateIntakeIsOpen = Boolean(linkAvailability.privateIntake);
   const anyPublicRouteIsOpen = discussionsAreOpen || contributionsAreOpen;
   const anyParticipationIsOpen = discussionsAreOpen || contributionsAreOpen || privateIntakeIsOpen;
@@ -236,26 +236,34 @@
   if (communityPublicWarning) communityPublicWarning.hidden = !anyPublicRouteIsOpen;
 
   if (anyParticipationIsOpen && communityStatusTitle && communityStatusText) {
-    if (discussionsAreOpen && contributionsAreOpen) {
+    if (privateIntakeIsOpen && anyPublicRouteIsOpen) {
+      if (discussionsAreOpen && contributionsAreOpen) {
+        communityStatusTitle.textContent = 'Public discussion, research contributions, and private witness intake are open.';
+      } else if (discussionsAreOpen) {
+        communityStatusTitle.textContent = 'Public discussion and private witness intake are open.';
+      } else {
+        communityStatusTitle.textContent = 'Research contributions and private witness intake are open.';
+      }
+    } else if (discussionsAreOpen && contributionsAreOpen) {
       communityStatusTitle.textContent = 'Public discussion and research contributions are open.';
     } else if (discussionsAreOpen) {
       communityStatusTitle.textContent = 'Public discussion is open.';
     } else if (contributionsAreOpen) {
       communityStatusTitle.textContent = 'Structured research contributions are open.';
     } else {
-      communityStatusTitle.textContent = 'Private experience intake is open.';
+      communityStatusTitle.textContent = 'Private witness intake is open.';
     }
 
     communityStatusText.textContent = privateIntakeIsOpen
-      ? 'Use only the path appropriate to your material. Witness reports remain separate from public research discussion and require explicit consent before publication.'
-      : 'Private experience intake remains closed until its consent, storage, access, retention, redaction, and takedown procedures are ready.';
+      ? 'Use public channels for discussion and checkable research. Use the private form for witness reports or sensitive details. Reports are reviewed privately and are never published automatically.'
+      : 'The private witness form is temporarily unavailable. Please do not send personal reports or media through public channels.';
 
     if (communityHelpCopy) {
       communityHelpCopy.textContent = anyPublicRouteIsOpen && privateIntakeIsOpen
         ? 'Ready to join a public discussion, contribute something checkable, or use the separate private route?'
         : anyPublicRouteIsOpen
           ? 'Ready to join an available public discussion or contribute something checkable?'
-          : 'A separate private route is available for experience sharing.';
+          : 'A separate private route is available for witness reports.';
     }
     if (communityHelpLabel) communityHelpLabel.textContent = 'Choose how to take part';
   }
@@ -265,7 +273,7 @@
     const privateIntakeTitle = document.querySelector('[data-private-intake-title]');
     const privateIntakeCopy = document.querySelector('[data-private-intake-copy]');
     if (privateIntakeLabel) privateIntakeLabel.textContent = 'Private, consent-based intake';
-    if (privateIntakeTitle) privateIntakeTitle.textContent = 'Share an experience through a separate intake';
-    if (privateIntakeCopy) privateIntakeCopy.textContent = 'Witness reports, experience descriptions, and sensitive media use a separate consent-based route, outside public discussion and the public repository.';
+    if (privateIntakeTitle) privateIntakeTitle.textContent = 'Share an observation privately';
+    if (privateIntakeCopy) privateIntakeCopy.textContent = 'Use this route for a witness report, sensitive details, or an access, copy, correction, consent-withdrawal, deletion, or other privacy request. Submissions are reviewed privately and are not published automatically. You may submit a new report without a name or follow-up contact.';
   }
 })();

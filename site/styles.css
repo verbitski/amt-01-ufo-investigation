@@ -59,7 +59,7 @@ button { font: inherit; }
 .github-section :focus-visible {
   outline-color: #513909;
 }
-.community-path-private :focus-visible { outline-color: var(--amber-light); }
+.community-private-line :focus-visible { outline-color: var(--amber-light); }
 
 ::selection { background: var(--amber); color: var(--ink); }
 
@@ -713,14 +713,27 @@ h1 em, h2 em { color: var(--amber-light); font-weight: 400; }
 }
 .community-private-line {
   display: grid;
-  grid-template-columns: minmax(220px, 0.48fr) minmax(0, 1fr);
-  gap: 24px;
-  align-items: start;
-  padding: 24px 2px;
-  border-bottom: 1px solid var(--line-dark);
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.68fr);
+  gap: clamp(30px, 6vw, 72px);
+  align-items: center;
+  margin-top: 28px;
+  padding: clamp(26px, 4vw, 44px);
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
 }
-.community-private-line strong { font-family: var(--serif); font-size: 21px; font-weight: 400; }
-.community-private-line p { margin: 0; color: var(--muted-dark); font-size: 12px; line-height: 1.6; }
+.community-private-copy .plain-label { border-color: rgba(241,199,110,0.7); color: var(--amber-light); }
+.community-private-copy h3 { margin: 18px 0 13px; color: var(--white); font-family: var(--serif); font-size: clamp(29px, 3vw, 40px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.08; }
+.community-private-line p { margin: 0; color: #c6c0b3; font-size: 12px; line-height: 1.65; }
+.community-private-policies { margin-top: 14px !important; }
+.community-private-policies a { color: var(--amber-light); text-underline-offset: 3px; }
+.community-private-policies a:hover { color: var(--white); }
+.community-private-action { display: flex; flex-direction: column; align-items: stretch; }
+.community-private-button { width: 100%; background: var(--amber); border-color: var(--amber); color: var(--ink); }
+.community-private-button[data-link-state="available"] { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+.community-private-button[data-link-state="available"]:hover { background: var(--amber-light); border-color: var(--amber-light); color: var(--ink); }
+.community-private-action small { display: block; margin-top: 13px; color: #aaa396; font-size: 10px; line-height: 1.5; }
+.community-private-action .community-availability { color: var(--amber-light); border-top-color: rgba(241,199,110,0.5); }
 
 .community-details { border-bottom: 1px solid var(--line-dark); }
 .community-details > summary {

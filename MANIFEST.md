@@ -33,10 +33,10 @@ This manifest describes the public derivative. Historical source packages remain
 | `GOVERNANCE.md` | Roles, decision authority, witness-record boundaries, ADR lifecycle, and release authority |
 | `CODE_OF_CONDUCT.md` | Contributor Covenant 3.0 adaptation and project-specific community safeguards |
 | `AI_USE_POLICY.md` | Permitted AI assistance, required disclosure, and human-verification rules |
-| `PRIVACY.md` | Launch privacy boundary and public-space warning |
-| `CONSENT_AND_TAKEDOWN.md` | Publication consent, correction, and project-controlled takedown process |
+| `PRIVACY.md` | Website, public-platform, and private Tally intake data-handling boundary |
+| `CONSENT_AND_TAKEDOWN.md` | Private-review and publication consent, correction, retention, and project-controlled takedown process |
 | `SECURITY.md` | Private vulnerability-reporting route and responsible-testing boundary |
-| `SUPPORT.md` | Public help, sensitive triage, and non-intake contact routes |
+| `SUPPORT.md` | Public help, sensitive triage, and private witness-intake route |
 | `DCO.txt` | Verbatim Developer's Certificate of Origin 1.1 |
 
 ## Foundation
@@ -144,7 +144,7 @@ The decision log is not a dated historical chronology and is not yet fully compl
 
 - `MASTER_DOSSIER.md`: omitted until a deterministic generator and drift check are committed.
 - Historical source archives: retained outside the public tree; hashes identify them without publishing private paths or uncontrolled binaries.
-- Raw witness intake and private personal data.
+- Raw Tally witness submissions, consent records, optional contact details, and other private personal data.
 - Private or rights-uncleared source media.
 - Third-party files without confirmed redistribution permission.
 

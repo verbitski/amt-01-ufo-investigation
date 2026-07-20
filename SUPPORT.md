@@ -14,7 +14,7 @@ Keep public questions focused on already published material. The community and r
 
 ## Repository work
 
-Once the public GitHub repository is available, use the appropriate public issue or pull-request route for reproducible bugs, documentation corrections, calculation audits, source corrections, and contribution proposals.
+Use the appropriate public GitHub issue or pull-request route for reproducible bugs, documentation corrections, calculation audits, source corrections, and contribution proposals.
 
 Do not open a public issue for sensitive conduct, security, identity, or witness-report material.
 
@@ -26,9 +26,11 @@ In the first message, share only the minimum needed to route the concern. Do not
 
 If the concern involves a moderator, privately contact a different moderator or the project steward.
 
-## No private witness intake
+## Private witness intake
 
-The project is not accepting private experience reports or personal evidence packages yet. Its consent, storage, access, retention, redaction, deletion, and takedown procedures are not operational.
+The [AMT-01 witness-intake form](https://tally.so/r/5BgZMb) is the project's only private route for a new experience report and its primary route for access, copy, correction, consent-withdrawal, deletion, or another privacy request concerning an earlier private submission. Privacy requests may also be sent to [werbitsky@gmail.com](mailto:werbitsky@gmail.com). Tally hosts the form, and project-level access to raw responses is limited to the project steward acting as the private-intake curator.
+
+Name, pseudonym, ordinary follow-up contact, and file uploads are optional for a new report. A rights request requires a response email so the curator can verify the requester and communicate the outcome. Uploads are limited to five files of 10 MB each and restricted to images, video, audio, PDF, and plain text. Use only a general location, remove unnecessary metadata, and read [PRIVACY.md](PRIVACY.md) and [CONSENT_AND_TAKEDOWN.md](CONSENT_AND_TAKEDOWN.md) before submitting. A submission is private by default and is not automatically published or accepted as a case record.
 
 Never post or send through public project channels:
 
@@ -42,7 +44,7 @@ Never post or send through public project channels:
 - credentials, access tokens, private keys, or unreleased vulnerability details;
 - third-party media you do not have permission to share.
 
-A direct message to a moderator is a route for sensitive conduct or security triage. It is not a general witness-intake channel.
+A direct message to a moderator is a route for sensitive conduct or security triage. It is not a witness-intake channel; use the Tally form for that purpose.
 
 ## What to include in a public help request
 

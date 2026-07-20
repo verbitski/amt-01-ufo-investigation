@@ -32,7 +32,7 @@
         <a href="#method">The framework</a>
         <a href="#help">How to help</a>
         <a class="nav-cta" href="#community">Community</a>
-        <a class="nav-cta nav-cta-secondary" href="#repository">GitHub</a>
+        <a class="nav-cta nav-cta-secondary" href="https://github.com/verbitski/amt-01-open-investigation" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
     </header>
 
@@ -321,7 +321,7 @@
               <h3>Every major choice has a reason.</h3>
             </div>
             <div>
-              <p>I use the decision log to explain 34 material choices: what changed, what information was considered, why a direction was selected, its consequences, and what could cause it to be reopened.</p>
+              <p>I use the decision log to explain 35 material choices: what changed, what information was considered, why a direction was selected, its consequences, and what could cause it to be reopened.</p>
               <p><strong>The history stays visible.</strong> Superseded decisions are retained instead of silently disappearing, so readers can follow how the project changed.</p>
             </div>
           </aside>
@@ -378,8 +378,8 @@
           </aside>
 
           <div class="help-next">
-            <p data-community-help-copy>See how public discussion, contributions, and future private experience sharing will work.</p>
-            <a class="button button-ghost" href="#community"><span data-community-help-label>View the community plan</span> <span aria-hidden="true">↓</span></a>
+            <p data-community-help-copy>Choose a public discussion route or use the separate private witness form.</p>
+            <a class="button button-ghost" href="#community"><span data-community-help-label>Choose how to take part</span> <span aria-hidden="true">↓</span></a>
           </div>
         </div>
       </section>
@@ -391,15 +391,15 @@
               <p class="section-index">05 / Community</p>
               <h2 id="community-title">Join the discussion or the work.</h2>
             </div>
-            <p class="section-intro">You can read without signing in. Discord is already open for public discussion. The GitHub repository will open with the public release. Private experience intake remains closed until a separate consent and privacy process is ready.</p>
+            <p class="section-intro">You can read without signing in. Discord is open for public discussion, GitHub holds the public research record, and a separate private form is available for witness reports.</p>
           </div>
 
           <aside class="community-launch-status" id="community-launch-status" aria-live="polite">
             <span aria-hidden="true"></span>
             <div>
-              <strong data-community-status-title>Public discussion is open.</strong>
-              <p data-community-status-text>Private experience intake remains closed until its consent, storage, access, retention, redaction, and takedown procedures are ready.</p>
-              <p class="community-public-warning" data-community-public-warning><strong>Public means public.</strong> Do not post witness reports, identifying details, exact private locations, faces, voices, location metadata, or unredacted personal media on Discord.</p>
+              <strong data-community-status-title>Public discussion and private witness intake are open.</strong>
+              <p data-community-status-text>Use Discord for public discussion. Use the private form for witness reports or sensitive details. Reports are reviewed privately and are never published automatically.</p>
+              <p class="community-public-warning" data-community-public-warning><strong>Public means public.</strong> Do not post witness reports, identifying details, exact private locations, faces, voices, location metadata, or unredacted personal media on Discord. Use the private witness form instead.</p>
             </div>
           </aside>
 
@@ -425,19 +425,31 @@
                 <span aria-hidden="true">02</span>
               </div>
               <h3>Review or contribute on GitHub</h3>
-              <p>The repository will hold the witness record, sources, calculations, open questions, dataset structure, corrections, and decision history.</p>
-              <a class="button community-button" data-link-key="repository" aria-describedby="repository-note" hidden>
+              <p>The repository holds the witness record, sources, calculations, open questions, dataset structure, corrections, and decision history.</p>
+              <a class="button community-button" href="https://github.com/verbitski/amt-01-open-investigation" target="_blank" rel="noopener noreferrer" data-link-key="repository" aria-describedby="repository-note">
                 <span data-link-label>Open the GitHub project</span>
                 <span aria-hidden="true">↗</span>
               </a>
-              <p class="community-availability" data-link-unavailable="repository">Repository not yet public</p>
-              <small id="repository-note" data-link-note="repository">The repository link will appear here when the public release is ready.</small>
+              <p class="community-availability" data-link-unavailable="repository" hidden>GitHub project temporarily unavailable</p>
+              <small id="repository-note" data-link-note="repository">Opens the public AMT-01 repository in a new tab.</small>
             </article>
           </div>
 
-          <aside class="community-private-line">
-            <strong>Personal experiences are not being accepted yet.</strong>
-            <p>Please do not post them publicly or send them by direct message. A separate consent-based route will open only after its privacy safeguards are ready.</p>
+          <aside class="community-private-line" id="private-intake" aria-labelledby="private-intake-title">
+            <div class="community-private-copy">
+              <span class="plain-label" data-private-intake-label>Private, consent-based intake</span>
+              <h3 id="private-intake-title" data-private-intake-title>Share an observation privately</h3>
+              <p data-private-intake-copy>Use this route for a witness report, sensitive details, or a privacy request. Submissions are reviewed privately and are not published automatically. A new report does not require a name or follow-up contact.</p>
+              <p class="community-private-policies">Before submitting, read the <a href="https://github.com/verbitski/amt-01-open-investigation/blob/main/PRIVACY.md" target="_blank" rel="noopener noreferrer">privacy policy</a> and <a href="https://github.com/verbitski/amt-01-open-investigation/blob/main/CONSENT_AND_TAKEDOWN.md" target="_blank" rel="noopener noreferrer">consent and takedown procedure</a>. Privacy contact: <a href="mailto:werbitsky@gmail.com">werbitsky@gmail.com</a>.</p>
+            </div>
+            <div class="community-private-action">
+              <a class="button community-private-button" data-link-key="privateIntake" href="https://tally.so/r/5BgZMb" target="_blank" rel="noopener noreferrer" aria-describedby="private-intake-note">
+                <span data-link-label>Share an observation privately</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p class="community-availability" data-link-unavailable="privateIntake" hidden>Private witness intake is temporarily unavailable</p>
+              <small id="private-intake-note" data-link-note="privateIntake">Opens the private witness intake form on Tally in a new tab. Review the consent and privacy information before sending.</small>
+            </div>
           </aside>
 
           <details class="community-details">

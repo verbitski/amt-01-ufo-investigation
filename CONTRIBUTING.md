@@ -30,7 +30,7 @@ For public orientation questions or help choosing a contribution route, use the 
 - claims about origin, operators, conspiracies, or identifiable people without evidence;
 - instructions for hazardous high-voltage, high-field, plasma, radiation, pressure-vessel, cryogenic, energetic, or otherwise unsafe experiments.
 
-Private experience intake is closed. Do not send a raw report by issue, pull request, Discord channel, or unsolicited direct message.
+Private experience reports belong only in the [consent-based witness-intake form](https://tally.so/r/5BgZMb). Do not send a raw report by issue, pull request, Discord channel, email, or unsolicited direct message. A private form submission is not a repository contribution and requires a separate publication workflow before any part can become public project material.
 
 ## Repository licenses and inbound contributions
 

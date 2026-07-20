@@ -48,7 +48,7 @@ The ordering below is a reconstructed sequence of project reasoning. It does not
 | 5 — Transport and control layers | How are local matter interaction, warp concepts, autonomy, and communication separated? | DEC-019–DEC-020 |
 | 6 — Evidence strategy | Which external evidence methods are worth pursuing, and how are sources ranked? | DEC-021–DEC-023 |
 | 7 — Research and documentation governance | How are safety, canonical documents, and future decisions managed? | DEC-024–DEC-026 |
-| 8 — Public-release hardening and witness amendments | How are historical identifiers, later corrections, licensing, provenance, and public contributions governed? | DEC-027–DEC-034 |
+| 8 — Public-release hardening, witness amendments, and controlled intake | How are historical identifiers, later corrections, licensing, provenance, public contributions, and private witness intake governed? | DEC-027–DEC-035 |
 
 ## 4. Decision index
 
@@ -88,6 +88,7 @@ The ordering below is a reconstructed sequence of project reasoning. It does not
 | DEC-032 | Adopt a scoped Apache-2.0 and CC BY 4.0 licensing policy for the public repository. | Accepted |
 | DEC-033 | Publish reconstruction media only as disclosure-baked, provenance-linked derivatives. | Accepted |
 | DEC-034 | Adopt steward-led public governance, DCO-based contributions, and guarded contribution channels. | Accepted |
+| DEC-035 | Adopt a consent-based private Tally witness intake with explicit launch and data-handling gates. | Accepted |
 
 ---
 
@@ -1517,7 +1518,7 @@ Review this decision if source or AI-production details are recovered; a creator
 - **Recorded date:** 2026-07-20
 - **Scope:** Public governance, contributor licensing, community conduct, contribution routes, automated review gates, and witness-record authority
 - **Supersedes:** none; formalizes the launch governance and contribution controls for the public repository and community
-- **Superseded by:** none
+- **Superseded by:** `DEC-035` for private-intake clauses 7 and 8 only; otherwise none
 - **Affected canonical documents:**
   - `CONTRIBUTING.md`
   - `GOVERNANCE.md`
@@ -1608,6 +1609,102 @@ Review this decision when the project appoints additional maintainers or introdu
 - **Conduct baseline:** [Contributor Covenant 3.0](https://www.contributor-covenant.org/version/3/0/)
 - **Public discussion route:** `https://discord.gg/JVvHf5cXhs`
 - **Private-route boundary:** moderator direct messages are limited to conduct, privacy, security, and takedown triage and are not witness intake
+
+---
+
+## DEC-035 — Adopt a consent-based private Tally witness intake with explicit launch and data-handling gates
+
+- **Status:** Accepted
+- **Recorded date:** 2026-07-20
+- **Scope:** Private witness intake, consent, data minimization, access, retention, publication permission, and privacy rights
+- **Supersedes:** `DEC-034` clauses 7 and 8 only after the launch gates below are complete; until then the prior closure remains in force, and the prohibition on intake through GitHub, Discord, or unsolicited messages remains in force after activation
+- **Superseded by:** none
+- **Affected canonical documents:**
+  - `PRIVACY.md`
+  - `CONSENT_AND_TAKEDOWN.md`
+  - `GOVERNANCE.md`
+  - `CONTRIBUTING.md`
+  - `AI_USE_POLICY.md`
+  - `SUPPORT.md`
+  - `README.md`
+  - `DOCUMENTATION_ARCHITECTURE.md`
+  - `MANIFEST.md`
+  - `RIGHTS_AND_ATTRIBUTION.md`
+  - `docs/07-reference/02-decision-log.md`
+  - `docs/00-foundation/02-claim-ledger.md`
+  - `docs/07-reference/04-change-log.md`
+
+### Context
+
+`DEC-034` deliberately kept private witness intake closed until the project could state what it would collect, why it would collect it, who could access it, how long it would be retained, how publication permission would be separated from private review, and how a submitter could exercise applicable privacy rights. The project also wants to learn from other witness accounts without asking people to expose raw reports or identifying details in public GitHub or Discord spaces.
+
+A dedicated external form can now provide a narrow private route without adding website accounts, a custom database, or informal evidence collection through moderator messages. Using a third-party service creates its own processing, retention, and account-security dependencies, so opening the route requires an explicit policy rather than only a link.
+
+### Inputs and evidence considered
+
+- the public/private, witness-curator, contribution, and review boundaries in `DEC-003`, `DEC-004`, `DEC-031`, and `DEC-034`;
+- the requirement in `DEC-032` that private intake material and consent records remain outside public license grants unless separately authorized;
+- the project objective of building comparable, structured case records without treating submission as authentication;
+- the fields and routing in the Tally form, including age confirmation, private-review consent, event description, memory-versus-estimate distinctions, optional ordinary follow-up details, restricted optional files, permission choices, and access, copy, correction, consent-withdrawal, deletion, and other privacy-request routes;
+- Tally's [GDPR information](https://tally.so/help/gdpr), which describes Tally as processor for respondent data stored on behalf of the form creator;
+- Tally's [submission-retention documentation](https://tally.so/help/submissions-data-retention), which identifies automatic retention control as a Business feature and requires manual deletion when that control is unavailable;
+- Tally's [deletion documentation](https://tally.so/help/how-to-delete-and-recover-form-data), which describes its Trash and permanent-deletion lifecycle; and
+- data-minimization, purpose-limitation, access-control, consent, correction, and deletion requirements appropriate to a small steward-led project.
+
+### Alternatives considered
+
+1. Keep private experience intake closed indefinitely.
+2. Accept reports through public GitHub issues or Discord channels.
+3. Accept reports through unsolicited moderator direct messages or informal email.
+4. Build project accounts, a custom intake database, and an on-site submission system before accepting any report.
+5. Use a dedicated Tally form with explicit consent, minimized optional identity fields, curator-only project access, a manual retention process, separate publication permission, and privacy-rights routing, with public website deployment gated on readable public policies and operational checks.
+
+### Decision
+
+Use option 5 under the following rules:
+
+1. Publish the [AMT-01 witness-intake form](https://tally.so/r/5BgZMb) with the controller identified as the individual project operator associated with GitHub `@verbitski` and the durable private contact `werbitsky@gmail.com`. This form is the only private route for a new witness report and the primary route for a privacy request concerning an earlier private submission. GitHub, public Discord, ordinary email, and unsolicited moderator messages remain non-intake channels. Do not deploy the public website CTA until the linked privacy documents are publicly readable and the intended Tally account access, security, integrations, and retention procedure have been checked.
+2. Tally hosts the form and acts as the processor for respondent data. At the project level, access to raw responses is limited to the project steward acting as private-intake curator. Tally and its authorized service providers may process the data as needed to operate the service under their own terms and privacy notice. Google reCAPTCHA is used for abuse prevention and is disclosed in the privacy notice.
+3. The launch form is for submitters who confirm they are at least 18. It collects only the routing, consent, general event context, narrative, appearance, movement, duration, environmental, other-witness, media, memory-versus-estimate, confidence, permission, follow-up, and request details needed for structured review.
+4. Name, pseudonym, ordinary follow-up email, and uploads are optional for a new report. A response email is required for the privacy-request route. Uploads are limited to five files of 10 MB each and restricted to images, video, audio, PDF, and plain text. Submitters are told to use a general location, avoid home addresses and precise private locations, remove unnecessary metadata, and omit identity documents, medical or legal records, credentials, classified information, and third-party personal data.
+5. Submission authorizes private storage and review only. It does not authenticate an event, guarantee follow-up or inclusion, grant a public license, or authorize publication. Public quotation, repository inclusion, dataset release, media use, attribution, anonymity, redaction, and licensing require separate, specific permission.
+6. Every raw Tally submission is reviewed and manually deleted from the active response list no later than 12 months after submission and may be deleted sooner. The current Tally plan does not enforce this automatically. A deleted response may remain in Tally Trash for up to 90 days unless emptied earlier. After permanent deletion, Tally states that clearing form data from backups can take up to 90 additional days.
+7. Retaining identified material beyond the raw-response limit requires a separate agreement with the submitter that names the material, purpose, access boundary, period, publication status, and withdrawal or deletion consequences. Acceptance for further review does not create that agreement or authorize publication. The original raw Tally response remains subject to the 12-month active-list limit.
+8. Access, copy, correction, consent-withdrawal, deletion, and other privacy requests use the same form and require a response email. They are handled as soon as practicable, with a target of response or initial assessment within 30 days. The target is not a guaranteed legal deadline; verification, safety, provider, backup, or legal complexity may require more time.
+9. Private Tally submissions are reviewed manually. They are not sent to an AI system unless a later workflow obtains separate, specific permission and documents provider terms, purpose, access, retention, redaction, deletion, and human review under `AI_USE_POLICY.md`.
+
+### Rationale
+
+This route lets a person provide a structured account without making it public and gives the project a consistent way to separate memory, estimate, optional identity, optional media, use permission, and later data-subject requests. Tally avoids the operational and security burden of custom accounts and a project-managed database, while explicit processor, access, retention, and deletion disclosures make the third-party dependency visible.
+
+Keeping publication consent separate prevents a private report from silently becoming an open-source asset or public case record. Minimizing location, identity, contact, and file collection reduces harm if an account or provider is compromised. A manual 12-month review cycle is implementable on the current plan without falsely claiming that Tally automatically enforces it.
+
+### Consequences and limitations
+
+- The published Tally URL can receive direct-link submissions before the project website is deployed. Each submission remains an unverified lead rather than evidence authenticated by the project, and the website release remains gated on public policy links and operational checks.
+- The project steward becomes the sole project-level custodian of raw intake at launch, creating centralization, availability, and account-security risk.
+- Respondents depend on Tally's infrastructure, terms, security, Trash behavior, backup lifecycle, and service continuity. The project cannot promise immediate erasure from every provider recovery layer.
+- Manual retention requires a recurring curator review. Missing that review would violate project policy even though the provider would continue storing responses.
+- The form deliberately excludes minors and discourages highly sensitive or precise private information. This limits the reports that can safely be accepted through the route.
+- A private report cannot be published, licensed, or used as an open dataset row without an additional permission and curation step.
+- Optional ordinary follow-up information protects anonymity but may make clarification more difficult. The privacy-request route requires a response email, and a private reference phrase provides an additional locator but is not proof of identity.
+- The 30-day target is an operational objective, not a guarantee, and does not replace any rights or deadlines that applicable law may independently require.
+
+### Review trigger
+
+Review this decision if the controller identity or contact route, form owner, URL, questions, purpose, age boundary, processor, CAPTCHA provider, allowed file types, workspace plan, access list, storage region, security controls, integrations, retention capability, Trash or backup lifecycle, publication workflow, AI-use boundary, or privacy-request route changes; if additional curators require access; if the project forms a legal entity; if reports involving minors or highly sensitive data are proposed; if a privacy or security incident occurs; if the manual 12-month deletion review is missed; if submission volume exceeds safe curator capacity; or if qualified legal or privacy review identifies a stronger requirement.
+
+### Traceability
+
+- **Related claims:** none directly; private submissions do not enter the claim ledger merely by being received
+- **Related hypotheses:** none; the intake route does not favor an explanation
+- **Related decisions:** `DEC-003`, `DEC-004`, `DEC-025`, `DEC-026`, `DEC-031`, `DEC-032`, `DEC-034`
+- **Related files:** `PRIVACY.md`, `CONSENT_AND_TAKEDOWN.md`, `GOVERNANCE.md`, `CONTRIBUTING.md`, `AI_USE_POLICY.md`, `SUPPORT.md`, `README.md`, `DOCUMENTATION_ARCHITECTURE.md`, `MANIFEST.md`, `RIGHTS_AND_ATTRIBUTION.md`, `docs/07-reference/02-decision-log.md`, `docs/00-foundation/02-claim-ledger.md`, `docs/07-reference/04-change-log.md`
+- **Private intake route:** `https://tally.so/r/5BgZMb`
+- **Processor documentation:** `https://tally.so/help/gdpr`
+- **Retention documentation:** `https://tally.so/help/submissions-data-retention`
+- **Deletion documentation:** `https://tally.so/help/how-to-delete-and-recover-form-data`
+- **CAPTCHA documentation:** `https://tally.so/help/recaptcha`
 
 ---
 

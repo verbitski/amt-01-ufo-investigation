@@ -170,7 +170,7 @@ The public repository may contain redacted case material, reviewed calculations,
 
 It must not contain raw witness submissions, private contact details, consent records, precise private locations, original sensitive metadata, unredacted faces or voices, or third-party files without redistribution permission. Public GitHub issues are not a private witness-intake channel.
 
-Repository participation is governed by `CONTRIBUTING.md`, `GOVERNANCE.md`, `CODE_OF_CONDUCT.md`, `AI_USE_POLICY.md`, `PRIVACY.md`, `CONSENT_AND_TAKEDOWN.md`, `SECURITY.md`, and `SUPPORT.md`. Structured issue forms and the pull-request template repeat the public/private boundary at the point of contribution. The project does not operate private experience intake at launch.
+Repository participation is governed by `CONTRIBUTING.md`, `GOVERNANCE.md`, `CODE_OF_CONDUCT.md`, `AI_USE_POLICY.md`, `PRIVACY.md`, `CONSENT_AND_TAKEDOWN.md`, `SECURITY.md`, and `SUPPORT.md`. Structured issue forms and the pull-request template repeat the public/private boundary at the point of contribution. Private witness intake operates through a separate consent-based Tally form. Its raw responses, consent records, and contact details remain outside the public repository and require a separate publication decision before any derived record can enter the public tree.
 
 ## 10. Licensing boundary
 

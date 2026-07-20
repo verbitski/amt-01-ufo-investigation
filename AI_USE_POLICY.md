@@ -109,9 +109,9 @@ Changing a reconstruction does not amend the witness record. If an image prompts
 
 ## Privacy and confidential material
 
-Public GitHub and Discord channels are not raw witness-intake systems. Do not place private reports or sensitive media into an AI prompt merely because an AI service is convenient.
+Public GitHub and Discord channels are not raw witness-intake systems. The project's private Tally form is an intake and storage route, not permission to place a report or sensitive media into an AI prompt.
 
-Before any future private workflow uses AI, the project must document:
+Before any private intake material is sent to or processed by an AI system, the project must obtain and document separate, specific permission and record:
 
 - consent and permitted purpose;
 - provider and data-processing terms;
@@ -123,7 +123,7 @@ Before any future private workflow uses AI, the project must document:
 - handling of minors or vulnerable people;
 - cross-border transfer where relevant.
 
-Until that workflow exists, private experience intake remains closed.
+Opening private witness intake does not open an AI-analysis workflow. Tally submissions are reviewed manually by the private-intake curator unless a separately governed and consented process is adopted.
 
 ## Rights and licensing
 

@@ -101,7 +101,7 @@ The initial public release is `v0.1.0`. The current structured dataset is a migr
 
 Public discussion is available through the project Discord linked from the website. Do not post raw witness reports, identifying information, exact private locations, faces, voices, location metadata, or sensitive media in Discord or public GitHub issues.
 
-Private experience intake remains closed until its consent, storage, access, retention, redaction, deletion, and takedown procedures are operational.
+The consent-based [Tally witness-intake form](https://tally.so/r/5BgZMb) hosts and stores private responses for the project, with project-level access limited to the project steward acting as private-intake curator. The privacy contact is [werbitsky@gmail.com](mailto:werbitsky@gmail.com). Name and ordinary follow-up contact are optional for a new report; rights requests require a response email. Uploads are optional, limited to five files of 10 MB each, and restricted to images, video, audio, PDF, and plain text. Use a general location rather than a precise private location. A submission is private by default and is not automatically published or accepted into a dataset. The same form provides access, copy, correction, consent-withdrawal, deletion, and other privacy-request routes. See [PRIVACY.md](PRIVACY.md) and [CONSENT_AND_TAKEDOWN.md](CONSENT_AND_TAKEDOWN.md).
 
 ## Contributing and governance
 

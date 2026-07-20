@@ -14,6 +14,8 @@ The project steward sets project scope, appoints maintainers, approves public re
 
 As witness-curator, the steward is the source authority for whether a statement accurately represents the steward's current first-person memory. The witness-curator may record a later amendment, reject wording that misstates that memory, and identify whether a reconstruction feels consistent with it.
 
+At launch, the project steward also acts as the private-intake curator. Project-level access to raw Tally witness submissions is limited to this curator. The role may review, minimize, delete, or request follow-up on a submission within the published privacy and consent boundaries, but cannot publish or license it without separate, specific permission from the submitter.
+
 This authority is narrow. It does not:
 
 - authenticate the external event;
@@ -141,13 +143,13 @@ Merge does not mean:
 - Current case values and superseded values remain traceable.
 - Structured-data and schema versions are recorded separately when necessary.
 - Generated artifacts are released only when their generator and drift check are committed.
-- A release must not include private intake, sensitive metadata, credentials, or rights-uncleared material.
+- A release must not include private intake responses, consent records, sensitive metadata, credentials, or rights-uncleared material.
 
 ## Community and private matters
 
 Public project questions belong in the [AMT-01 Discord community](https://discord.gg/JVvHf5cXhs) or, once available, the appropriate public GitHub route.
 
-Sensitive conduct or security concerns should be sent by private direct message to a server moderator. Never post raw witness reports, identifying details, exact private locations, sensitive media, credentials, or vulnerability details publicly. See [SUPPORT.md](SUPPORT.md).
+New private witness reports belong only in the [consent-based Tally form](https://tally.so/r/5BgZMb). Access, copy, correction, consent-withdrawal, deletion, or other privacy requests concerning an earlier private report should use the same form or [werbitsky@gmail.com](mailto:werbitsky@gmail.com). Do not send private reports through another project channel. Sensitive conduct or security concerns should be sent by private direct message to a server moderator. Never post raw witness reports, identifying details, exact private locations, sensitive media, credentials, or vulnerability details publicly. See [PRIVACY.md](PRIVACY.md), [CONSENT_AND_TAKEDOWN.md](CONSENT_AND_TAKEDOWN.md), and [SUPPORT.md](SUPPORT.md).
 
 ## Changing this governance document
 
