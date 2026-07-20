@@ -1,6 +1,8 @@
 # AMT-01: An Open Investigation
 
-**Canonical repository:** https://github.com/verbitski/amt-01-open-investigation
+**Project website:** https://amt01.vercel.app/
+
+**Research repository:** https://github.com/verbitski/amt-01-open-investigation
 
 AMT-01 is a witness-led research project built around one unresolved observation near the Antalya coast in summer 2004.
 
@@ -130,7 +132,13 @@ node --check site/script.js
 node --check site/site-config.js
 ```
 
-## Local preview and Vercel deployment
+## Public website
+
+The public project website is live at [amt01.vercel.app](https://amt01.vercel.app/). It presents the witness account, uncertainty boundary, reconstruction gallery, reverse-engineering framework, community routes, and private witness-intake entry point.
+
+This repository is the source and auditable research record behind the website. Vercel deploys the contents of [`site/`](site/) from the repository's `main` branch.
+
+### Preview locally
 
 Preview the website from the repository root:
 
@@ -138,7 +146,9 @@ Preview the website from the repository root:
 python3 -m http.server 4173 --directory site
 ```
 
-For a Git-connected Vercel deployment, use these project settings:
+### Vercel configuration for maintainers
+
+The production project uses these settings:
 
 - Root Directory: `site`
 - Framework Preset: `Other`

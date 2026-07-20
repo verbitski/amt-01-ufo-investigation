@@ -12,6 +12,9 @@ canonical: "yes"
 
 This manifest describes the public derivative. Historical source packages remain immutable outside the public tree and are identified by hashes in [`docs/07-reference/06-source-baselines.md`](docs/07-reference/06-source-baselines.md).
 
+- **Public website:** https://amt01.vercel.app/
+- **Canonical research repository:** https://github.com/verbitski/amt-01-open-investigation
+
 ## Entry points
 
 | Path | Purpose |
