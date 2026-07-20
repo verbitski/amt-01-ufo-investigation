@@ -6,7 +6,7 @@ This file identifies the material included in the public repository and the righ
 
 - Public attribution name: **AMT-01 Project contributors**
 - Work title: **AMT-01 Open Investigation**
-- Canonical source: https://github.com/verbitski/amt-01-open-investigation
+- Canonical source: https://github.com/verbitski/amt-01-ufo-investigation
 - Documentation, public data, witness material, and rights-controlled project media: **CC BY 4.0**
 - Software and schemas: **Apache-2.0**
 

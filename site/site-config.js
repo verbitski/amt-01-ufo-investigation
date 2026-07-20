@@ -4,7 +4,7 @@ window.AMT01_CONFIG = Object.freeze({
   links: {
     repository: {
       enabled: true,
-      url: 'https://github.com/verbitski/amt-01-open-investigation',
+      url: 'https://github.com/verbitski/amt-01-ufo-investigation',
       label: 'Open the GitHub project',
       unavailableLabel: 'GitHub project temporarily unavailable',
       availableNote: 'Opens the public AMT-01 repository in a new tab.',

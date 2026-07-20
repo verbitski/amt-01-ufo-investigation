@@ -2,7 +2,7 @@
 
 **Project website:** https://amt01.vercel.app/
 
-**Research repository:** https://github.com/verbitski/amt-01-open-investigation
+**Research repository:** https://github.com/verbitski/amt-01-ufo-investigation
 
 AMT-01 is a witness-led research project built around one unresolved observation near the Antalya coast in summer 2004.
 
@@ -164,7 +164,7 @@ This is a mixed-license open project:
 - software and schemas are licensed under Apache-2.0;
 - project documentation, structured public data, the witness record, and rights-controlled reconstruction media are licensed under CC BY 4.0;
 - the code of conduct is an adaptation of Contributor Covenant 3.0 under CC BY-SA 4.0;
-- attribution must credit **AMT-01 Project contributors** and link back to the [canonical repository](https://github.com/verbitski/amt-01-open-investigation);
+- attribution must credit **AMT-01 Project contributors** and link back to the [canonical repository](https://github.com/verbitski/amt-01-ufo-investigation);
 - third-party works and internal material are excluded.
 
 See [LICENSE.md](LICENSE.md) and [RIGHTS_AND_ATTRIBUTION.md](RIGHTS_AND_ATTRIBUTION.md) for the exact path and asset scope.

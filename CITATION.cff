@@ -6,7 +6,7 @@ version: 0.1.0
 date-released: 2026-07-20
 authors:
   - name: "AMT-01 Project contributors"
-repository-code: "https://github.com/verbitski/amt-01-open-investigation"
+repository-code: "https://github.com/verbitski/amt-01-ufo-investigation"
 url: "https://amt01.vercel.app/"
 abstract: >-
   A witness-led open investigation of an unresolved summer 2004 observation

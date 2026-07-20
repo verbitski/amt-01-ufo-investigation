@@ -35,6 +35,7 @@ canonical: "yes"
 - Documented curator-only project access; optional identity and ordinary follow-up fields; a required response email for privacy requests; optional uploads restricted to five images, video, audio, PDF, or plain-text files of 10 MB each; location and metadata minimization; separate publication permission; manual deletion of every raw Tally submission from the active response list within 12 months; Tally's provider-controlled Trash and backup lifecycle; reCAPTCHA processing; and a 30-day response or initial-assessment target for privacy requests.
 - Adopted DCO 1.1 sign-off and path-based inbound-equals-outbound contributions instead of a contributor license agreement.
 - Added guarded GitHub issue forms, a pull-request checklist, link validation, automated repository checks, and pull-request DCO enforcement.
+- Renamed the canonical GitHub repository to `amt-01-ufo-investigation`, updated all active source and attribution links, retained AMT-01 as the stable case identifier, and recorded the migration in `DEC-036`.
 
 ## v1.1 — 2026-07-19
 

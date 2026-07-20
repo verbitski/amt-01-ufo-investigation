@@ -107,3 +107,4 @@ The detailed rationale, alternatives, consequences, and review triggers are in `
 | `DEC-033` | Publish reconstruction media only as disclosure-baked, provenance-linked derivatives. | Accepted |
 | `DEC-034` | Adopt steward-led public governance, DCO-based contributions, and guarded contribution channels. | Accepted |
 | `DEC-035` | Adopt a consent-based private Tally witness intake with explicit launch and data-handling gates. | Accepted |
+| `DEC-036` | Rename the canonical repository to include “UFO” while retaining the AMT-01 case identifier. | Accepted |
