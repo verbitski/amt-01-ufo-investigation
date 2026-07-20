@@ -48,7 +48,7 @@ The ordering below is a reconstructed sequence of project reasoning. It does not
 | 5 — Transport and control layers | How are local matter interaction, warp concepts, autonomy, and communication separated? | DEC-019–DEC-020 |
 | 6 — Evidence strategy | Which external evidence methods are worth pursuing, and how are sources ranked? | DEC-021–DEC-023 |
 | 7 — Research and documentation governance | How are safety, canonical documents, and future decisions managed? | DEC-024–DEC-026 |
-| 8 — Public-release hardening, witness amendments, and controlled intake | How are historical identifiers, later corrections, licensing, provenance, public contributions, and private witness intake governed? | DEC-027–DEC-035 |
+| 8 — Public-release hardening, witness amendments, and controlled intake | How are historical identifiers, later corrections, licensing, provenance, public contributions, private witness intake, and the canonical public identity governed? | DEC-027–DEC-036 |
 
 ## 4. Decision index
 
@@ -89,6 +89,7 @@ The ordering below is a reconstructed sequence of project reasoning. It does not
 | DEC-033 | Publish reconstruction media only as disclosure-baked, provenance-linked derivatives. | Accepted |
 | DEC-034 | Adopt steward-led public governance, DCO-based contributions, and guarded contribution channels. | Accepted |
 | DEC-035 | Adopt a consent-based private Tally witness intake with explicit launch and data-handling gates. | Accepted |
+| DEC-036 | Rename the canonical repository to include “UFO” while retaining the AMT-01 case identifier. | Accepted |
 
 ---
 
@@ -1425,7 +1426,7 @@ Review this decision if the owner changes the desired permissions, a rights hold
 - **Related files:** `LICENSE.md`, `NOTICE`, `RIGHTS_AND_ATTRIBUTION.md`, `docs/07-reference/02-decision-log.md`, `docs/00-foundation/02-claim-ledger.md`
 - **Official license texts:** [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode.en)
 - **Attribution identity:** AMT-01 Project contributors
-- **Attribution link:** https://github.com/verbitski/amt-01-open-investigation
+- **Attribution link:** https://github.com/verbitski/amt-01-ufo-investigation
 
 ---
 
@@ -1705,6 +1706,80 @@ Review this decision if the controller identity or contact route, form owner, UR
 - **Retention documentation:** `https://tally.so/help/submissions-data-retention`
 - **Deletion documentation:** `https://tally.so/help/how-to-delete-and-recover-form-data`
 - **CAPTCHA documentation:** `https://tally.so/help/recaptcha`
+
+---
+
+## DEC-036 — Rename the canonical repository to include “UFO” while retaining the AMT-01 case identifier
+
+- **Status:** Accepted
+- **Recorded date:** 2026-07-20
+- **Scope:** Canonical public repository name, source and attribution links, website navigation, and citation metadata
+- **Supersedes:** the old repository URL only; no earlier research, evidence, licensing, or governance decision is superseded
+- **Superseded by:** none
+- **Affected canonical documents:**
+  - `README.md`
+  - `MANIFEST.md`
+  - `NOTICE`
+  - `CITATION.cff`
+  - `LICENSE.md`
+  - `RIGHTS_AND_ATTRIBUTION.md`
+  - `site/index.html`
+  - `site/site-config.js`
+  - `docs/00-foundation/02-claim-ledger.md`
+  - `docs/07-reference/02-decision-log.md`
+  - `docs/07-reference/04-change-log.md`
+
+### Context
+
+The initial public repository slug, `amt-01-open-investigation`, preserved the internal case identifier and the project's open method, but it did not tell a first-time GitHub visitor what kind of investigation the repository contained. The public website already describes the work as a witness-led UFO investigation while keeping the reported object's identity and origin unresolved.
+
+The repository name is part of the canonical source and attribution record. Changing it therefore requires a documented migration rather than an unrecorded cosmetic edit.
+
+### Inputs and evidence considered
+
+- the user's preference for a clearer GitHub name that includes the familiar term “UFO”;
+- the established use of **AMT-01** as the stable case identifier;
+- the project's explicit rule that “UFO” means unidentified in this context and does not establish extraterrestrial origin;
+- the existing public website at `https://amt01.vercel.app/`, whose address does not need to change with the repository slug;
+- GitHub's repository-rename behavior, which preserves repository identity and redirects the former URL; and
+- the licensing and citation requirement that project-controlled material point to one current canonical source.
+
+### Alternatives considered
+
+1. Keep `amt-01-open-investigation` and explain the topic only in the description and README.
+2. Replace AMT-01 with a generic UFO repository name, improving immediate recognition but weakening continuity with the case record.
+3. Rename the repository to `amt-01-ufo-investigation`, retaining the case identifier while adding a plain-language subject cue.
+
+### Decision
+
+Use option 3. The canonical repository is `https://github.com/verbitski/amt-01-ufo-investigation`. Keep **AMT-01 Open Investigation** as the project title and **AMT-01** as the case identifier. Continue to use “UFO” descriptively, without treating origin or mechanism as established.
+
+Update all active website, policy, license, attribution, citation, and repository-navigation links to the new canonical URL. Preserve the former URL only where it is explicitly part of the historical decision record.
+
+### Rationale
+
+The new slug makes the subject understandable before a visitor opens the README, while AMT-01 preserves continuity across the witness record, dataset, documentation, and website. This improves discoverability without changing the epistemic boundary of the investigation.
+
+### Consequences and limitations
+
+- Existing GitHub history, issues, pull requests, stars, and repository identity remain attached to the renamed repository.
+- GitHub redirects the former repository address, but current project material should use the new address directly rather than depend on that redirect.
+- Existing local clones may need their `origin` URL updated.
+- The website remains at `https://amt01.vercel.app/`; this decision does not rename the Vercel project or public site.
+- Adding “UFO” improves recognition but may carry cultural associations. Project copy must continue to state that unidentified does not mean extraterrestrial.
+
+### Review trigger
+
+Review this decision if AMT-01 becomes one case within a broader multi-case repository, the public project title changes, the website receives a permanent custom domain, the repository moves to an organization, the old GitHub slug is reused, or the current name repeatedly causes a material misunderstanding of scope.
+
+### Traceability
+
+- **Related claims:** none; this decision changes the public source address, not the witness record
+- **Related hypotheses:** none
+- **Related decisions:** `DEC-002`, `DEC-025`, `DEC-026`, `DEC-032`, `DEC-034`
+- **Former repository URL:** `https://github.com/verbitski/amt-01-open-investigation`
+- **Canonical repository URL:** `https://github.com/verbitski/amt-01-ufo-investigation`
+- **Public website:** `https://amt01.vercel.app/`
 
 ---
 

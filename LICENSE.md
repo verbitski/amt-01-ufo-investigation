@@ -36,13 +36,13 @@ This grant covers only rights held or controlled by the AMT-01 Project and its c
 
 When sharing or adapting CC BY material, use a reasonable attribution such as:
 
-> AMT-01 Open Investigation, by the AMT-01 Project contributors, licensed under CC BY 4.0. Source: https://github.com/verbitski/amt-01-open-investigation. Changes were made, if applicable.
+> AMT-01 Open Investigation, by the AMT-01 Project contributors, licensed under CC BY 4.0. Source: https://github.com/verbitski/amt-01-ufo-investigation. Changes were made, if applicable.
 
 The attribution must include:
 
 1. credit to **AMT-01 Project contributors**;
 2. the title **AMT-01 Open Investigation**;
-3. a link to https://github.com/verbitski/amt-01-open-investigation;
+3. a link to https://github.com/verbitski/amt-01-ufo-investigation;
 4. a link to https://creativecommons.org/licenses/by/4.0/;
 5. an indication of whether the material was modified.
 
