@@ -1,0 +1,11 @@
+# Private/provenance-preserving copy. The website uses the metadata-clean derivative.
+/site/assets/amt01-underside-sketch.png
+
+# Local launch audits and source-rights working notes are retained outside the public tree.
+/internal/
+
+# Local hosting state.
+/.vercel/
+
+.DS_Store
+*.log

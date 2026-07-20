@@ -1,0 +1,625 @@
+{
+  "schema_version": "1.0.0",
+  "bundle_status": "migration_fixture",
+  "case": {
+    "case_id": "AMT-01",
+    "legacy_ids": [],
+    "title": "Antalya-Mediterranean Triangle 01",
+    "case_role": "project_baseline",
+    "resolution_status": "insufficient_data",
+    "migration_status": "partial_fixture",
+    "public_summary": "A retrospective single-witness account of a dark triangular object moving slowly and apparently silently at low estimated altitude near the Mediterranean coast of Turkey. No original event imagery, independent witness, exact site/date, or calibrated measurement is available.",
+    "event": {
+      "time": {
+        "reported_description": "Summer 2004, approximately 21:00–22:00",
+        "value_status": "reported",
+        "normalized_start": null,
+        "normalized_end": null,
+        "precision": "season",
+        "timezone": null,
+        "unknown_reason": "The witness recalls summer 2004; the exact day and month have not been recovered."
+      },
+      "location": {
+        "public_description": "Mediterranean coast of Turkey, somewhere near Antalya",
+        "country_code": "TR",
+        "value_status": "reported",
+        "precision": "region",
+        "latitude": null,
+        "longitude": null,
+        "unknown_reason": "The exact hotel, observer position, and path have not been recovered."
+      }
+    },
+    "observation_modes": [
+      "unaided_visual",
+      "unaided_hearing",
+      "human_sensory"
+    ],
+    "observer_groups": 1,
+    "evidence_assessment": {
+      "tier": "C",
+      "tier_status": "proposed",
+      "rubric_version": "1.0.0",
+      "rationale": "Rich retrospective description, but no independent witness, original event media, exact site/date reconstruction, or instrumented measurements.",
+      "dimensions": {
+        "original_event_source": "missing",
+        "observation_channels": "single human sensory account",
+        "independent_observer_groups": 1,
+        "geometry_constraint": "retrospective estimates",
+        "timing_calibration": "none",
+        "sensor_metadata": "none",
+        "event_media": "none",
+        "mundane_alternatives": "partially tested in project analysis",
+        "contradictions": "not independently reviewed"
+      },
+      "review_ids": []
+    },
+    "discovery": {
+      "collection_id": null,
+      "query": null,
+      "inclusion_reason": "Primary project baseline rather than a corpus-search result.",
+      "exclusion_log_ref": null
+    },
+    "privacy": {
+      "contains_personal_data": true,
+      "raw_record_public": false,
+      "exact_location_status": "unknown",
+      "public_location_precision": "region",
+      "consent_record_id": null
+    },
+    "claim_ids": [
+      "OBS-AMT-SHAPE-001",
+      "EST-AMT-LENGTH-001",
+      "EST-AMT-PROXIMITY-001",
+      "EST-AMT-PATH-001",
+      "EST-AMT-DURATION-001",
+      "DER-AMT-SPEED-001",
+      "OBS-AMT-SOUND-001",
+      "OBS-AMT-AIRFLOW-001",
+      "OBS-AMT-BLACK-EXIST-001",
+      "EST-AMT-BLACK-COUNT-001",
+      "UNK-AMT-UPPER-GEOMETRY-001"
+    ],
+    "source_ids": [
+      "SRC-AMT-SYNTHESIS-001"
+    ],
+    "asset_ids": [
+      "ASSET-AMT-SKETCH-ORIGINAL-001",
+      "ASSET-AMT-SKETCH-PUBLIC-001",
+      "ASSET-AMT-SKETCH-PUBLIC-002",
+      "ASSET-AMT-RECON-HERO-001"
+    ],
+    "revision": {
+      "created_at": "2026-07-19",
+      "updated_at": "2026-07-20",
+      "content_version": "0.0.2-migration-fixture",
+      "schema_version": "1.0.0"
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "OBS-AMT-SHAPE-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["OBS-AMT-001"],
+      "type": "OBS",
+      "statement": "The visible planform was remembered as an elongated triangular arrow.",
+      "normalized": {
+        "subject": "observed_object",
+        "property": "visible_planform",
+        "value_status": "reported",
+        "value": "elongated_triangular_arrow"
+      },
+      "record_confidence": "high",
+      "confidence_basis": "Visually salient feature repeatedly retained in the current account; this does not provide independent corroboration.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/01-full-observation-record.md#4-geometry",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "claim_id": "EST-AMT-LENGTH-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["EST-AMT-005"],
+      "type": "EST",
+      "statement": "The object's length was visually estimated at approximately 6–8 m.",
+      "normalized": {
+        "subject": "observed_object",
+        "property": "length",
+        "value_status": "estimated",
+        "quantity": {
+          "min": 6,
+          "max": 8,
+          "unit": "m",
+          "unit_system": "SI",
+          "raw_expression": "approximately 6–8 m"
+        }
+      },
+      "record_confidence": "medium",
+      "confidence_basis": "Retrospective visual scale estimate without recovered site calibration.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/01-full-observation-record.md#4-geometry",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": [],
+      "estimate_basis": "Witness memory compared with the recalled path/lamp environment; exact geometry unknown."
+    },
+    {
+      "claim_id": "EST-AMT-PROXIMITY-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["EST-AMT-015"],
+      "type": "EST",
+      "statement": "The closest lateral distance from the object's path was retrospectively estimated at approximately 15–20 m.",
+      "normalized": {
+        "subject": "event_observation",
+        "property": "closest_lateral_distance_to_path",
+        "value_status": "estimated",
+        "quantity": {
+          "min": 15,
+          "max": 20,
+          "unit": "m",
+          "unit_system": "SI",
+          "raw_expression": "approximately 15–20 m"
+        }
+      },
+      "record_confidence": "low",
+      "confidence_basis": "Retrospective visual estimate without recovered site calibration.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/01-full-observation-record.md#9-estimates",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": [],
+      "estimate_basis": "Witness memory of the object's closest lateral passage; exact observer and path geometry are unrecovered."
+    },
+    {
+      "claim_id": "EST-AMT-PATH-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["EST-AMT-012"],
+      "type": "EST",
+      "statement": "The visible path length was estimated at approximately 40–50 m.",
+      "normalized": {
+        "subject": "event_observation",
+        "property": "visible_path_length",
+        "value_status": "estimated",
+        "quantity": {
+          "min": 40,
+          "max": 50,
+          "unit": "m",
+          "unit_system": "SI",
+          "raw_expression": "approximately 40–50 m"
+        }
+      },
+      "record_confidence": "medium",
+      "confidence_basis": "Retrospective visual estimate; site and lamp spacing are unrecovered.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/01-full-observation-record.md#7-motion",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": [],
+      "estimate_basis": "Witness memory of the path across the lamp-lit scene."
+    },
+    {
+      "claim_id": "EST-AMT-DURATION-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["EST-AMT-012"],
+      "type": "EST",
+      "statement": "The observation duration was estimated at approximately 12–15 s.",
+      "normalized": {
+        "subject": "event_observation",
+        "property": "duration",
+        "value_status": "estimated",
+        "quantity": {
+          "min": 12,
+          "max": 15,
+          "unit": "s",
+          "unit_system": "SI",
+          "raw_expression": "approximately 12–15 s"
+        }
+      },
+      "record_confidence": "medium",
+      "confidence_basis": "Retrospective duration estimate without contemporaneous timing.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/01-full-observation-record.md#7-motion",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": [],
+      "estimate_basis": "Witness memory; no clock, recording, or recovered event timestamp."
+    },
+    {
+      "claim_id": "DER-AMT-SPEED-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["DER-AMT-013"],
+      "type": "DER",
+      "statement": "Using independent range extrema, the estimated average speed is approximately 2.7–4.2 m/s (9.6–15 km/h).",
+      "normalized": {
+        "subject": "observed_object",
+        "property": "average_speed",
+        "value_status": "derived",
+        "quantity": {
+          "min": 2.7,
+          "max": 4.2,
+          "unit": "m/s",
+          "unit_system": "SI",
+          "raw_expression": "40/15 to 50/12 m/s"
+        }
+      },
+      "record_confidence": "medium",
+      "confidence_basis": "Arithmetic is straightforward; reliability is dominated by the retrospective distance and duration estimates.",
+      "status": "retained",
+      "evidence_links": [],
+      "relations": [
+        {"relation": "derived_from", "target_id": "EST-AMT-PATH-001"},
+        {"relation": "derived_from", "target_id": "EST-AMT-DURATION-001"}
+      ],
+      "derived_from": [
+        "EST-AMT-PATH-001",
+        "EST-AMT-DURATION-001"
+      ],
+      "method": {
+        "equation": "v = d / t; lower extreme = 40 m / 15 s; upper extreme = 50 m / 12 s",
+        "analysis_id": "ANL-AMT-KIN-001",
+        "implementation_version": null,
+        "assumptions": [
+          "Distance and duration ranges are treated as independent bounds.",
+          "Motion across the estimated path is treated as uniform.",
+          "Correlated memory error is not yet modeled."
+        ]
+      }
+    },
+    {
+      "claim_id": "OBS-AMT-SOUND-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["OBS-AMT-016"],
+      "type": "OBS",
+      "statement": "No sound attributable to the object was detected under the recalled conditions.",
+      "normalized": {
+        "subject": "observed_object",
+        "property": "acoustic_signature",
+        "value_status": "not_detected",
+        "value": null
+      },
+      "record_confidence": "high",
+      "confidence_basis": "Silence is a salient, stable part of the current account; the acoustic threshold was not calibrated.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/01-full-observation-record.md#9-environmental-signatures",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": [],
+      "observation_conditions": {
+        "observer_mode": "unaided hearing",
+        "scene_description": "Recalled as quiet enough for comfortable conversation, with light shore waves.",
+        "calibrated_threshold": null,
+        "threshold_unit": "dB SPL",
+        "threshold_unknown_reason": "No calibrated microphone or contemporaneous background-noise measurement."
+      }
+    },
+    {
+      "claim_id": "OBS-AMT-AIRFLOW-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["OBS-AMT-017"],
+      "type": "OBS",
+      "statement": "No airflow or downwash attributable to the object was detected under the recalled conditions.",
+      "normalized": {
+        "subject": "observed_object",
+        "property": "airflow_signature",
+        "value_status": "not_detected",
+        "value": null
+      },
+      "record_confidence": "high",
+      "confidence_basis": "Absence of noticed airflow is stable in the current account; no threshold or environmental measurement exists.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/01-full-observation-record.md#9-environmental-signatures",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": [],
+      "observation_conditions": {
+        "observer_mode": "unaided visual and tactile human observation",
+        "scene_description": "Witness recalls no movement of nearby grass, sand, leaves, clothing, or hair attributable to the object.",
+        "calibrated_threshold": null,
+        "threshold_unit": "m/s",
+        "threshold_unknown_reason": "No anemometer, calibrated target, recovered wind speed, or site reconstruction."
+      }
+    },
+    {
+      "claim_id": "OBS-AMT-BLACK-EXIST-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["OBS-AMT-009"],
+      "type": "OBS",
+      "statement": "Several sharply bounded regions were remembered as markedly darker than the surrounding underside.",
+      "normalized": {
+        "subject": "observed_object_underside",
+        "property": "markedly_dark_regions_present",
+        "value_status": "reported",
+        "value": true
+      },
+      "record_confidence": "high",
+      "confidence_basis": "Existence of contrasting regions is visually salient in the current account; topology and physical interpretation remain uncertain.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/01-full-observation-record.md#6-black-regions",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "claim_id": "EST-AMT-BLACK-COUNT-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["OBS-AMT-009"],
+      "type": "EST",
+      "statement": "The count of markedly dark regions was retrospectively estimated at approximately 5–7.",
+      "normalized": {
+        "subject": "observed_object_underside",
+        "property": "markedly_dark_region_count",
+        "value_status": "estimated",
+        "quantity": {
+          "min": 5,
+          "max": 7,
+          "unit": "1",
+          "unit_system": "count",
+          "raw_expression": "approximately 5–7"
+        }
+      },
+      "record_confidence": "low",
+      "confidence_basis": "The witness does not guarantee exact count, position, size, shape, or orientation.",
+      "status": "retained",
+      "evidence_links": [
+        {
+          "source_id": "SRC-AMT-SYNTHESIS-001",
+          "relation": "asserted_in",
+          "locator": "docs/01-case-amt01/02-sketch-and-surface-record.md#accuracy-statement",
+          "verification": "project_record_checked"
+        }
+      ],
+      "relations": [],
+      "estimate_basis": "Retrospective memory and later approximate sketch."
+    },
+    {
+      "claim_id": "UNK-AMT-UPPER-GEOMETRY-001",
+      "case_id": "AMT-01",
+      "legacy_group_ids": ["UNK-AMT-007"],
+      "type": "UNK",
+      "statement": "The upper geometry and thickness are unknown because only the underside and contour were clearly visible.",
+      "normalized": {
+        "subject": "observed_object",
+        "property": "upper_geometry",
+        "value_status": "unknown",
+        "value": null
+      },
+      "record_confidence": "not_applicable",
+      "confidence_basis": "Explicitly unobserved/undetermined in the current record.",
+      "status": "open",
+      "evidence_links": [],
+      "relations": []
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-AMT-SYNTHESIS-001",
+      "case_ids": ["AMT-01"],
+      "source_kind": "first_person_retrospective",
+      "title": "AMT-01 Full Observation Record — project synthesis",
+      "creator_role": "Primary witness account represented in a later project synthesis; exact drafting and LLM-assistance history requires documentation.",
+      "publisher": null,
+      "event_date": null,
+      "report_date": "2026-07-19",
+      "url": null,
+      "original_preserved": false,
+      "preserved_sha256": null,
+      "locators": [
+        "docs/01-case-amt01/01-full-observation-record.md",
+        "docs/01-case-amt01/02-sketch-and-surface-record.md",
+        "docs/01-case-amt01/03-uncertainty-register.md"
+      ],
+      "transformations": [
+        {
+          "kind": "LLM-assisted project synthesis — exact workflow unknown",
+          "tool": "unknown",
+          "model_version": null,
+          "date": "2026-07-19",
+          "human_checked": false
+        }
+      ],
+      "verification_status": "project_record_checked",
+      "rights": {
+        "status": "cleared",
+        "rights_holder": "AMT-01 Project contributors",
+        "license": "CC-BY-4.0",
+        "redistribution_allowed": true
+      },
+      "privacy": {
+        "contains_personal_data": true,
+        "redaction_status": "redacted"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "ASSET-AMT-SKETCH-ORIGINAL-001",
+      "case_ids": ["AMT-01"],
+      "title": "Approximate AMT-01 underside sketch — provenance-preserving private copy",
+      "path_or_url": "private://amt-01/assets/amt01-underside-sketch.png",
+      "mime_type": "image/png",
+      "sha256": "24258fc1bba18e4dd5d723b0f67474a5b4d65190e4dc69b16fade13180c43c10",
+      "dimensions": {
+        "width_px": 1758,
+        "height_px": 770,
+        "duration_s": null
+      },
+      "created_at": null,
+      "evidentiary_role": "derivative",
+      "synthetic_status": "unknown",
+      "synthetic": null,
+      "generation": null,
+      "parent_asset_ids": [],
+      "rights": {
+        "status": "unknown",
+        "rights_holder": null,
+        "license": null,
+        "redistribution_allowed": null
+      },
+      "redaction_status": "private"
+    },
+    {
+      "asset_id": "ASSET-AMT-SKETCH-PUBLIC-001",
+      "case_ids": ["AMT-01"],
+      "title": "Approximate AMT-01 underside sketch — superseded local archive derivative",
+      "path_or_url": "archive://amt-01/assets/amt01-underside-sketch-public-v1.png",
+      "mime_type": "image/png",
+      "sha256": "eb440f28024cfb6777e17fede9185d2886e9c7418d0508ce76ad4b0ee9a41bf1",
+      "dimensions": {
+        "width_px": 1758,
+        "height_px": 770,
+        "duration_s": null
+      },
+      "created_at": "2026-07-19",
+      "evidentiary_role": "derivative",
+      "synthetic_status": "unknown",
+      "synthetic": null,
+      "generation": null,
+      "parent_asset_ids": [
+        "ASSET-AMT-SKETCH-ORIGINAL-001"
+      ],
+      "rights": {
+        "status": "unknown",
+        "rights_holder": null,
+        "license": null,
+        "redistribution_allowed": null
+      },
+      "redaction_status": "private"
+    },
+    {
+      "asset_id": "ASSET-AMT-SKETCH-PUBLIC-002",
+      "case_ids": ["AMT-01"],
+      "title": "Disclosure-baked AMT-01 underside reconstruction sketch v2",
+      "path_or_url": "site/assets/amt01-underside-sketch-public-v2.png",
+      "mime_type": "image/png",
+      "sha256": "20f4b145637194d55f991827cb628945cc94947d891c07323bce83249bb8726a",
+      "dimensions": {
+        "width_px": 2184,
+        "height_px": 1504,
+        "duration_s": null
+      },
+      "created_at": "2026-07-20",
+      "evidentiary_role": "reconstruction",
+      "synthetic_status": "unknown",
+      "synthetic": null,
+      "generation": {
+        "tool": "FFmpeg 8.0.1 disclosure-baking pipeline",
+        "model_version": null,
+        "prompt_ref": "site/assets/provenance.json",
+        "human_reviewed": true
+      },
+      "parent_asset_ids": [],
+      "rights": {
+        "status": "cleared",
+        "rights_holder": "AMT-01 Project contributors",
+        "license": "CC-BY-4.0",
+        "redistribution_allowed": true
+      },
+      "redaction_status": "not_needed"
+    },
+    {
+      "asset_id": "ASSET-AMT-RECON-HERO-001",
+      "case_ids": ["AMT-01"],
+      "title": "AI-assisted AMT-01 website reconstruction keyframe v1",
+      "path_or_url": "archive://amt-01/assets/amt01-reconstruction-hero-v1.png",
+      "mime_type": "image/png",
+      "sha256": "6d1631757289b64677180a2405ce8cc69bc7c5ea39c5443bc2ad642c235058fd",
+      "dimensions": {
+        "width_px": 1672,
+        "height_px": 941,
+        "duration_s": null
+      },
+      "created_at": "2026-07-19",
+      "evidentiary_role": "reconstruction",
+      "synthetic_status": "confirmed_synthetic",
+      "synthetic": true,
+      "generation": {
+        "tool": "OpenAI built-in image generation",
+        "model_version": null,
+        "prompt_ref": "RECONSTRUCTION_SPEC.md#generation-prompt-used-for-the-keyframe",
+        "human_reviewed": true
+      },
+      "parent_asset_ids": [
+        "ASSET-AMT-SKETCH-ORIGINAL-001"
+      ],
+      "rights": {
+        "status": "unknown",
+        "rights_holder": null,
+        "license": null,
+        "redistribution_allowed": null
+      },
+      "redaction_status": "private"
+    },
+    {
+      "asset_id": "ASSET-AMT-RECON-HERO-002",
+      "case_ids": ["AMT-01"],
+      "title": "Disclosure-baked AMT-01 website reconstruction hero v2",
+      "path_or_url": "site/assets/amt01-reconstruction-hero-v2.png",
+      "mime_type": "image/png",
+      "sha256": "712cbcfc152b1045ed127c1dd777ca0474efd27722fe5d89402ab01ba19cb7ff",
+      "dimensions": {
+        "width_px": 1704,
+        "height_px": 923,
+        "duration_s": null
+      },
+      "created_at": "2026-07-19",
+      "evidentiary_role": "reconstruction",
+      "synthetic_status": "unknown",
+      "synthetic": null,
+      "generation": {
+        "tool": "FFmpeg 8.0.1 disclosure-baking pipeline",
+        "model_version": null,
+        "prompt_ref": "site/assets/provenance.json",
+        "human_reviewed": true
+      },
+      "parent_asset_ids": [],
+      "rights": {
+        "status": "cleared",
+        "rights_holder": "AMT-01 Project contributors",
+        "license": "CC-BY-4.0",
+        "redistribution_allowed": true
+      },
+      "redaction_status": "not_needed"
+    }
+  ],
+  "reviews": []
+}

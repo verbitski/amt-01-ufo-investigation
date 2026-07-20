@@ -1,0 +1,104 @@
+name: Documentation or data correction
+description: Propose a traceable correction to project documentation, claims, calculations, schemas, or structured data.
+title: "[Correction]: "
+labels:
+  - documentation
+  - correction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections must preserve provenance and the distinction between observation, estimate, derivation, inference, hypothesis, external report, decision, and unknown.
+
+        **This issue will be public.** Do not post personal data, exact private locations, raw witness reports, sensitive media, credentials, exploit details, or security issues. For a security issue, use GitHub private vulnerability reporting if it is available, or the private contact route published by the project.
+
+        The first-person witness record is curator-controlled. Do not rewrite it from outside the witness-amendment process. You may report an inconsistency, transcription problem, broken reference, or provenance gap here.
+
+  - type: input
+    id: location
+    attributes:
+      label: File, record, or claim ID
+      description: Give a repository-relative path, stable record ID, or claim ID.
+      placeholder: "docs/01-case-amt01/01-full-observation-record.md or EST-AMT-015"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correction_type
+    attributes:
+      label: Correction type
+      options:
+        - Typo, wording, or formatting
+        - Broken or incorrect link/reference
+        - Claim classification or status
+        - Source or provenance record
+        - Numerical value, units, or calculation
+        - Structured data or schema
+        - Decision-history consistency
+        - Other documented inconsistency
+    validations:
+      required: true
+
+  - type: dropdown
+    id: evidence_type
+    attributes:
+      label: Evidence or reasoning type
+      description: Select the type most directly affected by the proposed correction.
+      options:
+        - OBS - remembered observation
+        - EST - later estimate
+        - DER - mathematical derivation
+        - INF - engineering inference
+        - HYP - hypothesis
+        - EXT - external report
+        - DEC - project decision
+        - UNK - unresolved parameter
+        - Editorial or structural only
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text or value
+      description: Quote only the minimum public project text needed to identify the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction
+      description: State the exact replacement or structural change you recommend.
+    validations:
+      required: true
+
+  - type: textarea
+    id: basis
+    attributes:
+      label: Basis and source traceability
+      description: Link the canonical project record or a stable public primary source. Explain how it supports the correction and what it does not establish.
+      placeholder: Include source title, author or issuing body, date, stable URL or identifier, and relevant section or page.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Related records and downstream effects
+      description: List claim IDs, decision IDs, calculations, reconstructions, summaries, or data records that may also require review.
+      placeholder: "Related: DEC-031, EST-AMT-015, site story summary"
+
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Record and privacy boundaries
+      options:
+        - label: I am not presenting a later inference, estimate, reconstruction, or external report as a direct observation.
+          required: true
+        - label: If this concerns the witness record, I am reporting a review need and not claiming authority to rewrite the first-person account.
+          required: true
+        - label: I removed personal data, exact private locations, raw witness reports, sensitive media, credentials, and security details from this public issue.
+          required: true
+

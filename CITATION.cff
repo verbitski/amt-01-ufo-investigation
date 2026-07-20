@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite the canonical repository and the specific version you consulted."
+title: "AMT-01 Open Investigation"
+type: dataset
+version: 0.1.0
+date-released: 2026-07-20
+authors:
+  - name: "AMT-01 Project contributors"
+repository-code: "https://github.com/verbitski/amt-01-open-investigation"
+url: "https://github.com/verbitski/amt-01-open-investigation"
+abstract: >-
+  A witness-led open investigation of an unresolved summer 2004 observation
+  near the Antalya coast, including a versioned witness record, uncertainty
+  register, decision history, conditional analysis, reconstruction provenance,
+  and a machine-readable dataset prototype.
+keywords:
+  - UFO
+  - UAP
+  - witness record
+  - open investigation
+  - provenance
+  - uncertainty

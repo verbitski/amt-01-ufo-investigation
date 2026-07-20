@@ -1,0 +1,492 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "AMT-01 Open Investigation",
+  "case_id": "AMT-01",
+  "recorded_date": "2026-07-20",
+  "scope": "Public reconstruction media distributed by this repository",
+  "evidence_boundary": "These are post-event visual reconstructions. They are not event photographs, video frames, sensor captures, or independent evidence.",
+  "disclosure": {
+    "canonical_phrase": "RECONSTRUCTION / NOT EVENT MEDIA",
+    "display_lines": [
+      "RECONSTRUCTION",
+      "NOT EVENT MEDIA"
+    ],
+    "embedded_in_every_public_asset": true,
+    "downstream_note": "CC BY 4.0 permits adaptation. The project asks reusers to preserve this disclosure, but does not impose a restriction beyond the license. Modified copies must be identified as modified and must not imply project or witness endorsement."
+  },
+  "rights": {
+    "status": "project_owner_authorized",
+    "attribution_name": "AMT-01 Project contributors",
+    "work_title": "AMT-01 Open Investigation",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "redistribution_allowed": true,
+    "canonical_source_requirement": "Link to the canonical repository or project page identified in the root README.",
+    "source_layer_limitation": "The project licenses only rights it holds or controls. Provider, model, prompt, seed, background source, reference layers, and other production details remain unknown unless a family record says otherwise."
+  },
+  "build": {
+    "script": "tools/build_public_media.sh",
+    "tool": "FFmpeg",
+    "tool_version": "8.0.1",
+    "label_raster": {
+      "path": "tools/media/reconstruction-label.png",
+      "mime_type": "image/png",
+      "width_px": 360,
+      "height_px": 112,
+      "byte_size": 8727,
+      "sha256": "77f729d447d7757193eb8cb39b03d6512284de08e9536cbaccd86af21ecd86f1"
+    },
+    "publication_master_transform": {
+      "input": "Private unlabeled PNG master",
+      "output": "Public labeled PNG publication master",
+      "label_position": "bottom-right",
+      "right_margin_px": 24,
+      "bottom_margin_px": 24,
+      "label_width_px": 360,
+      "label_height_px": 112,
+      "output_pixel_format": "rgba",
+      "png_compression_level": 9,
+      "png_prediction": "mixed"
+    },
+    "responsive_presets": [
+      {
+        "preset_id": "JPEG-640",
+        "width_px": 640,
+        "height_rule": "preserve aspect ratio and round to an even value",
+        "scale_filter": "lanczos",
+        "label_width_px": 200,
+        "label_margin_px": 12,
+        "jpeg_quality_parameter": 3,
+        "pixel_format": "yuvj444p"
+      },
+      {
+        "preset_id": "JPEG-960",
+        "width_px": 960,
+        "height_rule": "preserve aspect ratio and round to an even value",
+        "scale_filter": "lanczos",
+        "label_width_px": 260,
+        "label_margin_px": 16,
+        "jpeg_quality_parameter": 3,
+        "pixel_format": "yuvj444p"
+      },
+      {
+        "preset_id": "JPEG-1440",
+        "width_px": 1440,
+        "height_rule": "preserve aspect ratio and round to an even value",
+        "scale_filter": "lanczos",
+        "label_width_px": 340,
+        "label_margin_px": 20,
+        "jpeg_quality_parameter": 3,
+        "pixel_format": "yuvj444p"
+      }
+    ],
+    "derivative_lineage_note": "Responsive JPEGs are created from the labeled PNG publication master. The disclosure panel is refreshed after resizing so it remains legible and fully covers the scaled source panel.",
+    "verification": {
+      "status": "passed",
+      "verified_date": "2026-07-20",
+      "publication_masters_checked": 6,
+      "method": "Decoded RGBA crop hashes were compared between each unlabeled private master and its labeled public master for four rectangles covering every pixel outside the recorded disclosure rectangle.",
+      "result": "All decoded pixels outside each disclosure rectangle were identical.",
+      "responsive_derivatives_checked": 18,
+      "responsive_method": "Each responsive JPEG was checked for its requested width, an even computed height, an in-bounds disclosure rectangle, and at least 0.98 SSIM between the decoded disclosure rectangle and the preset-scaled canonical disclosure raster.",
+      "responsive_result": "All eighteen responsive JPEGs passed disclosure verification. Their complete encoded outputs are represented by lineage, parameters, dimensions, byte sizes, and SHA-256 hashes."
+    }
+  },
+  "common_review": {
+    "witness_curator_status": "selected_or_explicitly_approved_for_website_use",
+    "privacy_review_status": "manual_publication_review_passed",
+    "privacy_review_note": "No identifiable person or private contact information is visible. The scenes remain illustrative and are not published as exact-site documentation.",
+    "synthetic_status": "unknown",
+    "production_details_note": "A reconstruction role is known. The exact human editing, AI assistance, provider, model, prompt, seed, reference-layer, and background-source history is not fully documented and is therefore recorded as unknown."
+  },
+  "families": [
+    {
+      "family_id": "MEDIA-AMT-HERO-002",
+      "title": "Website hero reconstruction",
+      "source_description": "Image supplied by the project owner for use as the website hero background, supplied filename hero-image.png.",
+      "source_master": {
+        "asset_id": "ASSET-AMT-RECON-HERO-002-SOURCE",
+        "distribution_status": "private_not_distributed",
+        "mime_type": "image/png",
+        "width_px": 1704,
+        "height_px": 923,
+        "byte_size": 1926606,
+        "sha256": "f3b4ab2cfb910bbdb9cc3e5b0982e04c34b9e1d1a6bf5b8cc0b4ec5d9c04c676"
+      },
+      "public_master": {
+        "asset_id": "ASSET-AMT-RECON-HERO-002",
+        "path": "site/assets/amt01-reconstruction-hero-v2.png",
+        "mime_type": "image/png",
+        "width_px": 1704,
+        "height_px": 923,
+        "byte_size": 1794294,
+        "sha256": "712cbcfc152b1045ed127c1dd777ca0474efd27722fe5d89402ab01ba19cb7ff",
+        "parent_asset_id": "ASSET-AMT-RECON-HERO-002-SOURCE",
+        "evidentiary_role": "reconstruction",
+        "disclosure_embedded": true
+      },
+      "responsive_derivatives": [
+        {
+          "asset_id": "ASSET-AMT-RECON-HERO-002-640",
+          "path": "site/assets/amt01-reconstruction-hero-v2-640.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 640,
+          "height_px": 346,
+          "byte_size": 40224,
+          "sha256": "bd8e26d3d7205fb764a78fc95902312e5203929de38de5762a2c304e45051fc6",
+          "parent_asset_id": "ASSET-AMT-RECON-HERO-002",
+          "preset_id": "JPEG-640",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-HERO-002-960",
+          "path": "site/assets/amt01-reconstruction-hero-v2-960.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 960,
+          "height_px": 520,
+          "byte_size": 82209,
+          "sha256": "aaedfc33b0ee0137445d5921d6b661daa8949a259bdaf4c91c93b8238018ed19",
+          "parent_asset_id": "ASSET-AMT-RECON-HERO-002",
+          "preset_id": "JPEG-960",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-HERO-002-1440",
+          "path": "site/assets/amt01-reconstruction-hero-v2-1440.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 1440,
+          "height_px": 780,
+          "byte_size": 149169,
+          "sha256": "8bc006448570d545a02db24bd3f8a095466d1549a12ec1ef9a4d8d1a1a1b765c",
+          "parent_asset_id": "ASSET-AMT-RECON-HERO-002",
+          "preset_id": "JPEG-1440",
+          "disclosure_embedded": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEDIA-AMT-SKETCH-002",
+      "title": "Later underside reconstruction",
+      "source_description": "Later underside reconstruction selected and supplied in the project conversation by the project owner.",
+      "source_master": {
+        "asset_id": "ASSET-AMT-SKETCH-PUBLIC-002-SOURCE",
+        "distribution_status": "private_not_distributed",
+        "mime_type": "image/png",
+        "width_px": 2184,
+        "height_px": 1504,
+        "byte_size": 3668384,
+        "sha256": "79e3501b3b74d96686296af704f3e0adcb033b850aa875285e9d7a5cba01f0e7"
+      },
+      "public_master": {
+        "asset_id": "ASSET-AMT-SKETCH-PUBLIC-002",
+        "path": "site/assets/amt01-underside-sketch-public-v2.png",
+        "mime_type": "image/png",
+        "width_px": 2184,
+        "height_px": 1504,
+        "byte_size": 2437530,
+        "sha256": "20f4b145637194d55f991827cb628945cc94947d891c07323bce83249bb8726a",
+        "parent_asset_id": "ASSET-AMT-SKETCH-PUBLIC-002-SOURCE",
+        "evidentiary_role": "reconstruction",
+        "disclosure_embedded": true
+      },
+      "responsive_derivatives": [
+        {
+          "asset_id": "ASSET-AMT-SKETCH-PUBLIC-002-640",
+          "path": "site/assets/amt01-underside-sketch-public-v2-640.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 640,
+          "height_px": 440,
+          "byte_size": 15723,
+          "sha256": "816b9955c1e901f4173768733f72a869abc9d6342b1aba58687b588adbe5dcee",
+          "parent_asset_id": "ASSET-AMT-SKETCH-PUBLIC-002",
+          "preset_id": "JPEG-640",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-SKETCH-PUBLIC-002-960",
+          "path": "site/assets/amt01-underside-sketch-public-v2-960.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 960,
+          "height_px": 662,
+          "byte_size": 26367,
+          "sha256": "e15325f641f1953d493e66cd9ff7e7adbe89649e898c3099a8e5a8c6131e752e",
+          "parent_asset_id": "ASSET-AMT-SKETCH-PUBLIC-002",
+          "preset_id": "JPEG-960",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-SKETCH-PUBLIC-002-1440",
+          "path": "site/assets/amt01-underside-sketch-public-v2-1440.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 1440,
+          "height_px": 992,
+          "byte_size": 46592,
+          "sha256": "d164c0f71b1422cff75d61bd1e06c69601599ed4bf82c2e05d35ccb5321141fa",
+          "parent_asset_id": "ASSET-AMT-SKETCH-PUBLIC-002",
+          "preset_id": "JPEG-1440",
+          "disclosure_embedded": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEDIA-AMT-APPEARANCE-001",
+      "title": "Appearance from the beach",
+      "source_description": "Image supplied by the project owner for the website gallery, supplied filename appearance.png.",
+      "source_master": {
+        "asset_id": "ASSET-AMT-RECON-APPEARANCE-001-SOURCE",
+        "distribution_status": "private_not_distributed",
+        "mime_type": "image/png",
+        "width_px": 1599,
+        "height_px": 923,
+        "byte_size": 1706309,
+        "sha256": "dae1176534306aefc9ea535d0f27b03e514b541c5cfeae6f56836db14d38c158"
+      },
+      "public_master": {
+        "asset_id": "ASSET-AMT-RECON-APPEARANCE-001",
+        "path": "site/assets/amt01-reconstruction-appearance-v1.png",
+        "mime_type": "image/png",
+        "width_px": 1599,
+        "height_px": 923,
+        "byte_size": 1588169,
+        "sha256": "409cf13bb9f7164126ca0c859d6b8c955137073d6f1169edc7a838e721a3f0b5",
+        "parent_asset_id": "ASSET-AMT-RECON-APPEARANCE-001-SOURCE",
+        "evidentiary_role": "reconstruction",
+        "disclosure_embedded": true
+      },
+      "responsive_derivatives": [
+        {
+          "asset_id": "ASSET-AMT-RECON-APPEARANCE-001-640",
+          "path": "site/assets/amt01-reconstruction-appearance-v1-640.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 640,
+          "height_px": 370,
+          "byte_size": 42050,
+          "sha256": "dc5ecbe6d95ace1e2ab36df880d2f59eb5ec6bf30b3f6c1ab3dca215422b18f5",
+          "parent_asset_id": "ASSET-AMT-RECON-APPEARANCE-001",
+          "preset_id": "JPEG-640",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-APPEARANCE-001-960",
+          "path": "site/assets/amt01-reconstruction-appearance-v1-960.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 960,
+          "height_px": 554,
+          "byte_size": 80335,
+          "sha256": "f3bbdbc152d995c883cbc5952c65eccc6ee5fab17f54d27a5e56f82bb1c79f72",
+          "parent_asset_id": "ASSET-AMT-RECON-APPEARANCE-001",
+          "preset_id": "JPEG-960",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-APPEARANCE-001-1440",
+          "path": "site/assets/amt01-reconstruction-appearance-v1-1440.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 1440,
+          "height_px": 832,
+          "byte_size": 141716,
+          "sha256": "1dbffc91577cea5fbb858baf601fc88701024a8ce53752dd13b20847893a6d9c",
+          "parent_asset_id": "ASSET-AMT-RECON-APPEARANCE-001",
+          "preset_id": "JPEG-1440",
+          "disclosure_embedded": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEDIA-AMT-OBSERVATION-POINT-001",
+      "title": "View from the recalled observation point",
+      "source_description": "Image supplied by the project owner for the website gallery, supplied filename POV-from-observation-point.png.",
+      "source_master": {
+        "asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001-SOURCE",
+        "distribution_status": "private_not_distributed",
+        "mime_type": "image/png",
+        "width_px": 1704,
+        "height_px": 923,
+        "byte_size": 1734690,
+        "sha256": "5d752d53394124202cb876d1ed749e2712675ebf57b57fde4ff598f476d6f909"
+      },
+      "public_master": {
+        "asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001",
+        "path": "site/assets/amt01-reconstruction-observation-point-v1.png",
+        "mime_type": "image/png",
+        "width_px": 1704,
+        "height_px": 923,
+        "byte_size": 1794210,
+        "sha256": "5dc4587196824e8d378be05c4bb471d7b292fa5d91c3007f299438ca3c77658d",
+        "parent_asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001-SOURCE",
+        "evidentiary_role": "reconstruction",
+        "disclosure_embedded": true
+      },
+      "responsive_derivatives": [
+        {
+          "asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001-640",
+          "path": "site/assets/amt01-reconstruction-observation-point-v1-640.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 640,
+          "height_px": 346,
+          "byte_size": 41034,
+          "sha256": "14111f66cdd9e8c9c23fb5d0dfa270bc9efb3f89f2fd95589ea2a83c5df4c7b9",
+          "parent_asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001",
+          "preset_id": "JPEG-640",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001-960",
+          "path": "site/assets/amt01-reconstruction-observation-point-v1-960.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 960,
+          "height_px": 520,
+          "byte_size": 83574,
+          "sha256": "bf84a64349e00fc78e911d6605ea5ad3d1253bec84ae9ac5c6a3b1e5cfe83e5a",
+          "parent_asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001",
+          "preset_id": "JPEG-960",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001-1440",
+          "path": "site/assets/amt01-reconstruction-observation-point-v1-1440.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 1440,
+          "height_px": 780,
+          "byte_size": 152148,
+          "sha256": "6a2b8057ce2e06d7994489629a2d6ce75fe2c344ee3b57315befe574e72b8374",
+          "parent_asset_id": "ASSET-AMT-RECON-OBSERVATION-POINT-001",
+          "preset_id": "JPEG-1440",
+          "disclosure_embedded": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEDIA-AMT-ADDITIONAL-VIEW-001",
+      "title": "Additional overhead reconstruction",
+      "source_description": "Image supplied by the project owner for the website gallery, supplied filename additional-illustration.png.",
+      "source_master": {
+        "asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001-SOURCE",
+        "distribution_status": "private_not_distributed",
+        "mime_type": "image/png",
+        "width_px": 1672,
+        "height_px": 941,
+        "byte_size": 1523304,
+        "sha256": "8d7bc075d229e3b864051ff8a28aa6c094cefe8291013f07a903ab623e4ced52"
+      },
+      "public_master": {
+        "asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001",
+        "path": "site/assets/amt01-reconstruction-additional-view-v1.png",
+        "mime_type": "image/png",
+        "width_px": 1672,
+        "height_px": 941,
+        "byte_size": 1403720,
+        "sha256": "9fb48816f76ddd8808c7c19f8f84bcf9c8cb998e0065f538534fa7256bb93049",
+        "parent_asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001-SOURCE",
+        "evidentiary_role": "reconstruction",
+        "disclosure_embedded": true
+      },
+      "responsive_derivatives": [
+        {
+          "asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001-640",
+          "path": "site/assets/amt01-reconstruction-additional-view-v1-640.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 640,
+          "height_px": 360,
+          "byte_size": 30776,
+          "sha256": "c45c95e725fb5cf001fc9800765fc9c6ee3de4c591bd8d5b665549971d0b6636",
+          "parent_asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001",
+          "preset_id": "JPEG-640",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001-960",
+          "path": "site/assets/amt01-reconstruction-additional-view-v1-960.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 960,
+          "height_px": 540,
+          "byte_size": 58842,
+          "sha256": "0a859352a6bc7eebade5af87958d65366a910cc8da3ff7d3a772a38500de3892",
+          "parent_asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001",
+          "preset_id": "JPEG-960",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001-1440",
+          "path": "site/assets/amt01-reconstruction-additional-view-v1-1440.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 1440,
+          "height_px": 810,
+          "byte_size": 104604,
+          "sha256": "b8860840c508f19df2280162e2ca0e3314321132128d4c4ef3a8156ad114436f",
+          "parent_asset_id": "ASSET-AMT-RECON-ADDITIONAL-VIEW-001",
+          "preset_id": "JPEG-1440",
+          "disclosure_embedded": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEDIA-AMT-DISTANT-VIEW-002",
+      "title": "Reconstruction shortly before disappearance",
+      "source_description": "Updated image supplied by the project owner for the website gallery, supplied filename before-disappearance.png.",
+      "source_master": {
+        "asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002-SOURCE",
+        "distribution_status": "private_not_distributed",
+        "mime_type": "image/png",
+        "width_px": 1774,
+        "height_px": 886,
+        "byte_size": 1600798,
+        "sha256": "23f10457bb89cdcfe405653c1007dbf73af96eaad6d51e1a719ec02ba7afacdc"
+      },
+      "public_master": {
+        "asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002",
+        "path": "site/assets/amt01-reconstruction-distant-view-v2.png",
+        "mime_type": "image/png",
+        "width_px": 1774,
+        "height_px": 886,
+        "byte_size": 1473102,
+        "sha256": "9ee809e71c666369a2ce8849143ae31e30ec5f994f9801239ef547bc741bba66",
+        "parent_asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002-SOURCE",
+        "evidentiary_role": "reconstruction",
+        "disclosure_embedded": true
+      },
+      "responsive_derivatives": [
+        {
+          "asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002-640",
+          "path": "site/assets/amt01-reconstruction-distant-view-v2-640.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 640,
+          "height_px": 320,
+          "byte_size": 29904,
+          "sha256": "8a90abd4201efa9ab5a425fae24c4f9761405da576d1f955e8f6f731c9d6ed5c",
+          "parent_asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002",
+          "preset_id": "JPEG-640",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002-960",
+          "path": "site/assets/amt01-reconstruction-distant-view-v2-960.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 960,
+          "height_px": 480,
+          "byte_size": 61420,
+          "sha256": "ed1efff0db43bbb99e08a9a28222fd0b7c687e241db19d3d0c6aa974955b7c09",
+          "parent_asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002",
+          "preset_id": "JPEG-960",
+          "disclosure_embedded": true
+        },
+        {
+          "asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002-1440",
+          "path": "site/assets/amt01-reconstruction-distant-view-v2-1440.jpg",
+          "mime_type": "image/jpeg",
+          "width_px": 1440,
+          "height_px": 720,
+          "byte_size": 112590,
+          "sha256": "b2dc836821e240bbb90575096ef39bbe6c34c23c41ed7ce684f937acde75b608",
+          "parent_asset_id": "ASSET-AMT-RECON-DISTANT-VIEW-002",
+          "preset_id": "JPEG-1440",
+          "disclosure_embedded": true
+        }
+      ]
+    }
+  ],
+  "supersession": {
+    "public_status": "Only the assets listed in this manifest are current public reconstruction media.",
+    "private_archive_note": "Earlier versions and unlabeled delivery files are retained outside public deployment and repository release paths. Their local retention does not make them part of the public release."
+  }
+}

@@ -1,0 +1,103 @@
+name: Source submission
+description: Submit a public source for verification, comparison, or a specific project claim.
+title: "[Source]: "
+labels:
+  - source-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit a source locator and explain its relevance. A source establishes what that source reports; it does not automatically establish that the report or interpretation is true.
+
+        **This issue will be public.** Do not post personal data, exact private locations, raw witness reports, sensitive media, credentials, exploit details, or security issues. Do not upload rights-uncleared media or documents. For a security issue, use GitHub private vulnerability reporting if it is available, or the private contact route published by the project.
+
+  - type: textarea
+    id: citation
+    attributes:
+      label: Full citation
+      description: Provide the title, author or issuing body, publication date, publisher or archive, and edition or version when known.
+    validations:
+      required: true
+
+  - type: input
+    id: locator
+    attributes:
+      label: Stable public URL or identifier
+      description: Prefer an official primary-source URL, DOI, archive identifier, report number, or public catalogue record.
+      placeholder: "https://... or DOI/report/archive identifier"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source_type
+    attributes:
+      label: Source type
+      options:
+        - Official or government record
+        - Peer-reviewed paper or technical standard
+        - Primary interview, transcript, or first-person publication
+        - Archival catalogue or contemporaneous record
+        - Manufacturer or technical documentation
+        - News, documentary, or secondary report
+        - Public dataset
+        - Other public source
+    validations:
+      required: true
+
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Relevance to AMT-01
+      description: Identify the exact claim, signature, method, comparison case, or open question this source may inform.
+      placeholder: Reference project claim IDs when possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: What the source supports and does not support
+      description: Separate the existence of the report, the reported observation, and any interpretation or mechanism claim.
+    validations:
+      required: true
+
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Provenance and verification notes
+      description: Explain how you found it, whether it is the original, and any OCR, translation, edition, excerpt, or authenticity limitations.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rights
+    attributes:
+      label: Rights and access status
+      options:
+        - Link or citation only; no redistribution permission claimed
+        - Public domain or openly licensed; license identified below
+        - Project-created or explicit permission is documented
+        - Rights status unknown; link only
+    validations:
+      required: true
+
+  - type: textarea
+    id: rights_details
+    attributes:
+      label: Rights or license details
+      description: If you selected an open license or permission, link the authoritative terms or permission record. Do not paste private correspondence.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Submission boundaries
+      options:
+        - label: I searched the repository for this source or an equivalent record before submitting.
+          required: true
+        - label: I am supplying a locator and traceability information, not uploading rights-uncleared third-party material.
+          required: true
+        - label: I understand that inclusion records a source and its stated limits; it does not authenticate an extraordinary interpretation.
+          required: true
+        - label: I removed personal data, exact private locations, raw witness reports, sensitive media, credentials, and security details from this public issue.
+          required: true
+

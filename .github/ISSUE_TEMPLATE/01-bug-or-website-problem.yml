@@ -1,0 +1,104 @@
+name: Bug or website problem
+description: Report a reproducible problem with the public website, repository, data, or validation tools.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve AMT-01.
+
+        **This issue will be public.** Do not post personal data, exact private locations, raw witness reports, sensitive media, credentials, exploit details, or security issues. For a security issue, use GitHub private vulnerability reporting if it is available, or the private contact route published by the project. Redact screenshots and logs before attaching them.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: Where did you encounter the problem?
+      options:
+        - Public website
+        - Documentation
+        - Structured data or schema
+        - Validation or repository tooling
+        - GitHub contribution workflow
+        - Other public project material
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Public URL or repository path
+      description: Link to the public page or provide a repository-relative path. Do not include a private local path.
+      placeholder: "site/index.html or https://example.org/page#section"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem summary
+      description: Describe the problem in one or two clear paragraphs.
+      placeholder: What is wrong, and why does it matter?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Give the smallest repeatable sequence that shows the problem.
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What happened instead? Include only redacted, public-safe error text or screenshots.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser or environment
+      description: Optional. Include browser and device type, operating system, or Node version when relevant.
+      placeholder: "Firefox 128 on macOS, mobile Safari, or Node 22"
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Blocks access or validation
+        - Produces incorrect or misleading output
+        - Makes a feature difficult to use
+        - Visual or editorial defect
+        - Minor issue
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: public_safety
+    attributes:
+      label: Public-safety confirmation
+      options:
+        - label: I removed personal data, exact private locations, raw witness reports, sensitive media, credentials, and security details from this public issue.
+          required: true
+        - label: This is not a security vulnerability or confidential report.
+          required: true
+

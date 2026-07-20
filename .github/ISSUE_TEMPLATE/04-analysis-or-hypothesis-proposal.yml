@@ -1,0 +1,111 @@
+name: Analysis or hypothesis proposal
+description: Propose a calculation, competing explanation, test, or clearly labeled hypothesis.
+title: "[Analysis]: "
+labels:
+  - analysis
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Strong proposals state their inputs, assumptions, derivation, discriminating predictions, and failure conditions. A hypothesis is not evidence, and agreement with a reconstruction is not independent support.
+
+        **This issue will be public.** Do not post personal data, exact private locations, raw witness reports, sensitive media, credentials, exploit details, or security issues. For a security issue, use GitHub private vulnerability reporting if it is available, or the private contact route published by the project.
+
+  - type: dropdown
+    id: proposal_type
+    attributes:
+      label: Proposal type
+      options:
+        - Reproducible calculation or derivation
+        - Conventional identification or explanation
+        - Competing interpretation of a retained claim
+        - Engineering requirements analysis
+        - Speculative mechanism hypothesis
+        - Experiment, simulation, or discriminating test
+        - Dataset or comparison method
+    validations:
+      required: true
+
+  - type: input
+    id: question
+    attributes:
+      label: Research question
+      description: State one bounded question that the proposal addresses.
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_records
+    attributes:
+      label: Related project records
+      description: List the exact OBS, EST, DER, INF, HYP, EXT, DEC, or UNK IDs and canonical files used.
+      placeholder: "OBS-AMT-016, EST-AMT-015, DER-PHY-003"
+    validations:
+      required: true
+
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs and assumptions
+      description: Give units, ranges, uncertainty, detection assumptions, source links, and any values chosen for modeling convenience.
+    validations:
+      required: true
+
+  - type: textarea
+    id: method
+    attributes:
+      label: Method and reasoning
+      description: Show the calculation, logic, model, comparison procedure, or reproducible steps. Link code or data if already public.
+    validations:
+      required: true
+
+  - type: textarea
+    id: result
+    attributes:
+      label: Result or prediction
+      description: State the result without promoting it to a stronger evidence class.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tests
+    attributes:
+      label: Discriminating tests and failure conditions
+      description: What observation, calculation, source, experiment, or simulation result would count against this proposal or distinguish it from alternatives?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Name the strongest competing explanations and explain what currently separates them, if anything.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source traceability
+      description: Link public primary sources and identify exact sections, equations, tables, or dataset versions. AI output is not a source.
+
+  - type: textarea
+    id: ai_use
+    attributes:
+      label: AI assistance
+      description: State whether an AI system helped draft, code, calculate, translate, summarize, or search. Identify the system and what you independently verified, or write "None."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Epistemic and public-safety boundaries
+      options:
+        - label: I labeled observations, estimates, derivations, inferences, hypotheses, external reports, decisions, and unknowns separately.
+          required: true
+        - label: I did not treat a reconstruction, AI output, unresolved external report, or model fit as event evidence.
+          required: true
+        - label: I removed personal data, exact private locations, raw witness reports, sensitive media, credentials, and security details from this public issue.
+          required: true
+

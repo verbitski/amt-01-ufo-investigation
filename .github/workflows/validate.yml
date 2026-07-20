@@ -1,0 +1,55 @@
+name: Validate repository
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate public project records
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate case bundle
+        run: node tools/validate_bundle.mjs
+
+      - name: Audit decision log
+        run: node tools/audit_decision_log.mjs docs/07-reference/02-decision-log.md docs/00-foundation/02-claim-ledger.md
+
+      - name: Validate public media provenance
+        run: node tools/validate_media_provenance.mjs
+
+      - name: Check local documentation and website links
+        run: node tools/check_local_links.mjs
+
+      - name: Verify DCO sign-off on pull-request commits
+        if: github.event_name == 'pull_request'
+        run: node tools/check_dco_signoff.mjs "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}"
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check site/script.js
+          node --check site/site-config.js
+          node --check tools/validate_bundle.mjs
+          node --check tools/audit_decision_log.mjs
+          node --check tools/validate_media_provenance.mjs
+          node --check tools/check_local_links.mjs
+          node --check tools/check_dco_signoff.mjs
