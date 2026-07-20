@@ -106,3 +106,4 @@ The detailed rationale, alternatives, consequences, and review triggers are in `
 | `DEC-032` | Adopt a scoped Apache-2.0 and CC BY 4.0 licensing policy for the public repository. | Accepted |
 | `DEC-033` | Publish reconstruction media only as disclosure-baked, provenance-linked derivatives. | Accepted |
 | `DEC-034` | Adopt steward-led public governance, DCO-based contributions, and guarded contribution channels. | Accepted |
+| `DEC-035` | Adopt a consent-based private Tally witness intake with explicit launch and data-handling gates. | Accepted |
