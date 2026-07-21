@@ -12,7 +12,7 @@ Vercel states that Web Analytics does not use cookies and stores anonymized, agg
 
 The purpose is to learn whether people find and read the public project material and which public pages or referral sources are useful. Analytics data is available to the project steward in the Vercel dashboard and is not sold or used by the project for advertising. The current Hobby-plan dashboard provides a one-month reporting window; Vercel states that it may retain data longer than the guaranteed reporting window. See [Vercel's limits and pricing documentation](https://vercel.com/docs/analytics/limits-and-pricing).
 
-Do not put personal or sensitive information in a website URL or query string. Browser privacy tools and content blockers may prevent analytics requests. If the analytics provider, collected dimensions, event configuration, purpose, access, or retention terms change materially, this notice and the decision record must be reviewed before or when the change takes effect.
+Do not put personal or sensitive information in a website URL or query string. Browser privacy tools and content blockers may prevent analytics requests. If the analytics provider, collected dimensions, event configuration, purpose, access, or retention terms change materially, this notice must be reviewed before or when the change takes effect.
 
 Separately from Web Analytics, the hosting provider may process technical data needed to deliver and protect the site, such as an IP address, request time, requested URL, browser or device information, and security logs. That infrastructure processing is controlled by the hosting provider and its own privacy terms, not by a project-managed database.
 

@@ -3,7 +3,7 @@ title: "Public Repository Manifest"
 project: "AMT-01 Open Investigation"
 section: "root"
 version: "1.2"
-last_updated: "2026-07-21"
+last_updated: "2026-07-20"
 status: "active"
 canonical: "yes"
 ---
@@ -31,7 +31,7 @@ This manifest describes the public derivative. Historical source packages remain
 | `RIGHTS_AND_ATTRIBUTION.md` | Rights boundaries and third-party exclusions |
 | `CITATION.cff` | Versioned citation metadata and canonical repository URL |
 | `site/assets/provenance.json` | Canonical reconstruction-media lineage, hashes, transformations, disclosure checks, and rights status |
-| `site/vercel.json` | Zero-build Vercel routing, same-origin analytics transport, and browser-security header configuration |
+| `site/vercel.json` | Zero-build Vercel routing and browser-security header configuration |
 | `CONTRIBUTING.md` | Contribution routes, DCO sign-off, evidence discipline, and review checks |
 | `GOVERNANCE.md` | Roles, decision authority, witness-record boundaries, ADR lifecycle, and release authority |
 | `CODE_OF_CONDUCT.md` | Contributor Covenant 3.0 adaptation and project-specific community safeguards |
@@ -133,7 +133,7 @@ The decision log is not a dated historical chronology and is not yet fully compl
 | `templates/decision-record-template.md` | Future material-decision template |
 | `templates/hypothesis-card-template.md` | Hypothesis comparison template |
 | `templates/source-review-template.md` | Source-review template |
-| `site/` | Dependency-free public website, disclosure-baked reconstruction gallery, and Vercel Web Analytics client |
+| `site/` | Dependency-free public website and disclosure-baked reconstruction gallery |
 
 ## GitHub contribution interface and checks
 
