@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const excludedTopLevel = new Set([".git", "internal", "LICENSES"]);
 const checkedExtensions = new Set([".md", ".html", ".css"]);
+const platformRoutes = new Set(["/_vercel/insights/script.js"]);
 const findings = [];
 let checkedFileCount = 0;
 let checkedLinkCount = 0;
@@ -44,6 +45,7 @@ function isExternalOrAnchor(target) {
 async function checkTarget(sourcePath, sourceText, rawTarget, offset) {
   const target = normalizeTarget(rawTarget);
   if (isExternalOrAnchor(target)) return;
+  if (platformRoutes.has(target)) return;
   checkedLinkCount += 1;
 
   const pathPart = target.split("#", 1)[0].split("?", 1)[0];
