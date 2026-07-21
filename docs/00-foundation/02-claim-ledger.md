@@ -3,7 +3,7 @@ title: "Canonical Claim Ledger"
 project: "AMT-01 Open Investigation"
 section: "foundation"
 version: "1.2"
-last_updated: "2026-07-21"
+last_updated: "2026-07-20"
 status: "active"
 canonical: "yes"
 ---
@@ -108,4 +108,3 @@ The detailed rationale, alternatives, consequences, and review triggers are in `
 | `DEC-034` | Adopt steward-led public governance, DCO-based contributions, and guarded contribution channels. | Accepted |
 | `DEC-035` | Adopt a consent-based private Tally witness intake with explicit launch and data-handling gates. | Accepted |
 | `DEC-036` | Rename the canonical repository to include “UFO” while retaining the AMT-01 case identifier. | Accepted |
-| `DEC-037` | Enable cookie-free aggregate Vercel Web Analytics with a documented privacy and security boundary. | Accepted |

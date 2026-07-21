@@ -3,19 +3,12 @@ title: "Change Log"
 project: "AMT-01 Open Investigation"
 section: "reference"
 version: "1.2"
-last_updated: "2026-07-21"
+last_updated: "2026-07-20"
 status: "active"
 canonical: "yes"
 ---
 
 # Change Log
-
-## v1.2 maintenance: 2026-07-21
-
-- Enabled basic Vercel Web Analytics for aggregate website page views and traffic dimensions under `DEC-037`.
-- Kept analytics cookie-free and limited the initial configuration to standard page views, with no custom events, advertising audiences, cross-site tracking, or witness-form instrumentation.
-- Updated `PRIVACY.md` with the purpose, possible dimensions, provider, access boundary, one-month Hobby reporting window, provider-controlled retention caveat, and a visible website footer link.
-- Preserved the strict same-origin script policy and changed only `connect-src` from `none` to `self` for Vercel's same-origin analytics intake.
 
 ## v1.2 public derivative: 2026-07-20
 

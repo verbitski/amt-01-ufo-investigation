@@ -138,8 +138,6 @@ The public project website is live at [amt01.vercel.app](https://amt01.vercel.ap
 
 This repository is the source and auditable research record behind the website. Vercel deploys the contents of [`site/`](site/) from the repository's `main` branch.
 
-The production site uses cookie-free Vercel Web Analytics for aggregate page views and traffic patterns. It does not configure custom events or analytics on the separate witness-intake form. See [PRIVACY.md](PRIVACY.md) for the collected dimensions, purpose, access, and provider limits.
-
 ### Preview locally
 
 Preview the website from the repository root:
@@ -157,7 +155,7 @@ The production project uses these settings:
 - Build Command: leave blank
 - Output Directory: `.`
 
-The website is plain HTML, CSS, and JavaScript, so it requires no dependency installation or build step. [`site/vercel.json`](site/vercel.json) supplies clean URLs and restrictive browser-security headers. Vercel Web Analytics must remain enabled for the project so its same-origin script and intake routes are provisioned. Setting the Vercel root to `site` also prevents repository documentation and internal research files from being published as website paths.
+The website is plain HTML, CSS, and JavaScript, so it requires no dependency installation or build step. [`site/vercel.json`](site/vercel.json) supplies clean URLs and restrictive browser-security headers. Setting the Vercel root to `site` also prevents repository documentation and internal research files from being published as website paths.
 
 ## Licensing
 
