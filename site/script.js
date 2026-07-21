@@ -1,4 +1,8 @@
 (() => {
+  window.va = window.va || function queueVercelAnalytics() {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+
   const hero = document.querySelector('.hero');
   const motionToggle = document.querySelector('[data-motion-toggle]');
   const motionLabel = document.querySelector('[data-motion-label]');

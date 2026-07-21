@@ -4,9 +4,17 @@ This notice describes the privacy boundary of the AMT-01 Open Investigation, inc
 
 ## The Project Website
 
-The project website is a static site. The project does not operate user accounts, private messaging, mailing lists, analytics, advertising trackers, or project-set cookies through the website. Its private witness-intake form is hosted separately by Tally and opens as an external service.
+The project website is a static site. It does not operate user accounts, private messaging, mailing lists, advertising trackers, or project-set cookies. Its private witness-intake form is hosted separately by Tally and opens as an external service.
 
-The hosting provider may still process technical data needed to deliver and protect the site, such as an IP address, request time, requested URL, browser or device information, and security logs. That processing is controlled by the hosting provider and its own privacy terms, not by a project-managed database.
+The website uses [Vercel Web Analytics](https://vercel.com/docs/analytics) to understand aggregate readership, including page views and general traffic patterns. The project does not configure custom events, user profiles, cross-site tracking, advertising audiences, or analytics on the separate Tally form.
+
+Vercel states that Web Analytics does not use cookies and stores anonymized, aggregated data rather than information associated with an individual or IP address. Depending on the request, analytics dimensions may include the time, visited URL or path, filtered query parameters, referrer, coarse country or region, operating system, browser, device type, and analytics-script version. Vercel derives a visitor identifier from the incoming request and discards that identifier after 24 hours, preventing recognition across different days or websites. See [Vercel's Web Analytics privacy documentation](https://vercel.com/docs/analytics/privacy-policy).
+
+The purpose is to learn whether people find and read the public project material and which public pages or referral sources are useful. Analytics data is available to the project steward in the Vercel dashboard and is not sold or used by the project for advertising. The current Hobby-plan dashboard provides a one-month reporting window; Vercel states that it may retain data longer than the guaranteed reporting window. See [Vercel's limits and pricing documentation](https://vercel.com/docs/analytics/limits-and-pricing).
+
+Do not put personal or sensitive information in a website URL or query string. Browser privacy tools and content blockers may prevent analytics requests. If the analytics provider, collected dimensions, event configuration, purpose, access, or retention terms change materially, this notice and the decision record must be reviewed before or when the change takes effect.
+
+Separately from Web Analytics, the hosting provider may process technical data needed to deliver and protect the site, such as an IP address, request time, requested URL, browser or device information, and security logs. That infrastructure processing is controlled by the hosting provider and its own privacy terms, not by a project-managed database.
 
 ## Private Witness Intake and Tally
 

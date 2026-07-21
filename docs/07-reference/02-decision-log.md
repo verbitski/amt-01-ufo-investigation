@@ -3,7 +3,7 @@ title: "Decision Log"
 project: "AMT-01 Open Investigation"
 section: "reference"
 version: "1.2"
-last_updated: "2026-07-20"
+last_updated: "2026-07-21"
 status: "active"
 canonical: "yes"
 ---
@@ -48,7 +48,7 @@ The ordering below is a reconstructed sequence of project reasoning. It does not
 | 5 — Transport and control layers | How are local matter interaction, warp concepts, autonomy, and communication separated? | DEC-019–DEC-020 |
 | 6 — Evidence strategy | Which external evidence methods are worth pursuing, and how are sources ranked? | DEC-021–DEC-023 |
 | 7 — Research and documentation governance | How are safety, canonical documents, and future decisions managed? | DEC-024–DEC-026 |
-| 8 — Public-release hardening, witness amendments, and controlled intake | How are historical identifiers, later corrections, licensing, provenance, public contributions, private witness intake, and the canonical public identity governed? | DEC-027–DEC-036 |
+| 8 — Public-release hardening, controlled intake, and public operations | How are historical identifiers, later corrections, licensing, provenance, participation, private intake, canonical identity, and privacy-aware website operations governed? | DEC-027–DEC-037 |
 
 ## 4. Decision index
 
@@ -90,6 +90,7 @@ The ordering below is a reconstructed sequence of project reasoning. It does not
 | DEC-034 | Adopt steward-led public governance, DCO-based contributions, and guarded contribution channels. | Accepted |
 | DEC-035 | Adopt a consent-based private Tally witness intake with explicit launch and data-handling gates. | Accepted |
 | DEC-036 | Rename the canonical repository to include “UFO” while retaining the AMT-01 case identifier. | Accepted |
+| DEC-037 | Enable cookie-free aggregate Vercel Web Analytics with a documented privacy and security boundary. | Accepted |
 
 ---
 
@@ -1780,6 +1781,90 @@ Review this decision if AMT-01 becomes one case within a broader multi-case repo
 - **Former repository URL:** `https://github.com/verbitski/amt-01-open-investigation`
 - **Canonical repository URL:** `https://github.com/verbitski/amt-01-ufo-investigation`
 - **Public website:** `https://amt01.vercel.app/`
+
+---
+
+## DEC-037 — Enable cookie-free aggregate Vercel Web Analytics with a documented privacy and security boundary
+
+- **Status:** Accepted
+- **Recorded date:** 2026-07-21
+- **Scope:** Public website page-view measurement, analytics-provider processing, privacy disclosure, access, retention limits, and browser-security policy
+- **Supersedes:** the former `PRIVACY.md` statement that the project website operated no analytics; no earlier research or evidence decision is superseded
+- **Superseded by:** none
+- **Affected canonical documents:**
+  - `PRIVACY.md`
+  - `README.md`
+  - `MANIFEST.md`
+  - `site/index.html`
+  - `site/script.js`
+  - `site/vercel.json`
+  - `tools/check_local_links.mjs`
+  - `docs/00-foundation/02-claim-ledger.md`
+  - `docs/07-reference/02-decision-log.md`
+  - `docs/07-reference/04-change-log.md`
+
+### Context
+
+The public website is live, but the project has no aggregate information about whether people find or read it. Basic traffic information can help evaluate outreach and navigation without creating website accounts or collecting witness reports on the site.
+
+The existing privacy notice explicitly stated that the website operated no analytics. `DEC-034` also requires a new ADR for a material privacy change or project-controlled analytics service. Analytics therefore cannot be introduced as an undocumented script-only change.
+
+### Inputs and evidence considered
+
+- the user's request to activate analytics for the production website;
+- the site's dependency-free HTML, CSS, and JavaScript architecture and its restrictive Content Security Policy;
+- the separation between the public website and the consent-based private Tally witness-intake form;
+- Vercel's statement that Web Analytics is cookie-free and stores anonymized aggregate data rather than data points associated with an individual or IP address;
+- Vercel's documented dimensions, which may include time, URL or path, filtered query parameters, referrer, coarse location, operating system, browser, device type, and analytics-script version;
+- Vercel's statement that its request-derived visitor identifier is discarded after 24 hours and cannot recognize a visitor across different days or websites;
+- the current Hobby-plan one-month dashboard reporting window and Vercel's statement that it may retain data longer than the guaranteed reporting window; and
+- the technical requirement to permit only same-origin analytics script and connection routes without weakening the existing ban on third-party scripts or inline script execution.
+
+### Alternatives considered
+
+1. Keep the website entirely unmeasured.
+2. Enable basic Vercel Web Analytics for aggregate page views and traffic dimensions, with no custom events and an updated privacy boundary.
+3. Add a more extensive third-party analytics or advertising platform with persistent identifiers, cookies, behavioral profiles, or cross-site capabilities.
+4. Build project-controlled logging, identity, or analytics infrastructure.
+
+### Decision
+
+Use option 2 under the following rules:
+
+1. Measure page views and Vercel's standard aggregate traffic dimensions on the public AMT-01 website only. Do not configure custom events, user accounts, advertising audiences, cross-site tracking, or individual visitor profiles at launch.
+2. Load Vercel's analytics client from the same website origin at `/_vercel/insights/script.js`. Initialize its command queue in the existing first-party `site/script.js` file so the Content Security Policy does not need to allow inline scripts.
+3. Change `connect-src` from `none` to `self` only. Keep `script-src 'self'` and all other restrictive security directives. Do not add a third-party analytics hostname.
+4. Do not add analytics to the separate Tally witness-intake form, GitHub, or Discord. Do not place personal or sensitive information in website URLs, query strings, or analytics events.
+5. Provide an enduring footer link to `PRIVACY.md` and disclose the purpose, possible dimensions, cookie-free design, provider, project access, reporting window, and provider-controlled retention limits.
+6. Limit project-level dashboard access to the project steward under the existing Vercel account boundary. Do not sell analytics data or combine it into person-level profiles.
+7. Treat content-blocker losses, approximate geolocation, provider classification, and aggregate visitor counts as measurement limitations rather than exact facts about the audience.
+
+### Rationale
+
+The selected option provides enough information to learn whether the public material is reaching readers while preserving the project's preference for a small, transparent data footprint. Reusing the hosting provider's cookie-free aggregate service avoids adding another vendor, login system, database, or cross-site identifier. The narrow same-origin Content Security Policy change keeps the analytics path technically functional without opening the site to arbitrary external scripts or connections.
+
+### Consequences and limitations
+
+- Page views and aggregate dimensions become visible to the project steward in Vercel's dashboard.
+- Content blockers and browser privacy tools may suppress requests, so the dashboard will undercount some visits.
+- Coarse location, referrer, browser, device, and visitor totals are provider-derived approximations and must not be treated as verified identities or precise audience measurements.
+- No project cookie or persistent project identifier is introduced. The decision not to display a cookie banner is based on the current cookie-free, anonymized configuration and must be reviewed if the service or applicable requirements change.
+- The analytics service still depends on Vercel's infrastructure, policies, availability, access controls, and provider-controlled retention. Hosting and security logs remain a separate provider processing activity.
+- Enabling only standard page views limits insight into button use, gallery interaction, form exits, or contribution conversions. Custom events require a later privacy review and material-decision assessment before activation.
+
+### Review trigger
+
+Review this decision if the analytics provider, script or intake origin, collected dimensions, cookie or identifier behavior, custom-event configuration, query-string handling, purpose, dashboard access, export, combination with other datasets, plan, reporting window, provider retention, privacy terms, legal assessment, Content Security Policy, website domain, or witness-intake boundary changes; if analytics data reveals unexpected personal information; or if a privacy or security incident occurs.
+
+### Traceability
+
+- **Related claims:** none; aggregate audience metrics do not alter the witness record or case evidence
+- **Related hypotheses:** none
+- **Related decisions:** `DEC-025`, `DEC-026`, `DEC-034`, `DEC-035`, `DEC-036`
+- **Vercel Web Analytics quickstart:** `https://vercel.com/docs/analytics/quickstart`
+- **Vercel Web Analytics privacy documentation:** `https://vercel.com/docs/analytics/privacy-policy`
+- **Vercel Web Analytics limits and pricing:** `https://vercel.com/docs/analytics/limits-and-pricing`
+- **Public privacy notice:** `PRIVACY.md`
 
 ---
 
