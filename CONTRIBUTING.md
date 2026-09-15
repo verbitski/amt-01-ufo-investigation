@@ -1,5 +1,23 @@
 # Contributing to AMT-01 Open Investigation
 
+## Your first contribution
+
+Start with [one small task](docs/06-research-program/03-first-contributions.md): check the speed estimate, compare a known object, or clarify one detail. Each task includes the source material, an example of a useful result, and a place to share it.
+
+For a quick question, [join the Discord discussion](https://discord.gg/JVvHf5cXhs). You can ask before preparing a formal research submission. Keep personal witness reports and sensitive details in the [private form](https://tally.so/r/5BgZMb).
+
+**For example:** link one unclear sentence, suggest a replacement, and explain why it is easier to understand without changing the meaning. You do not need to solve the case to improve the record.
+
+When you are ready to submit:
+
+- **A correction or source:** use the matching [GitHub issue form](https://github.com/verbitski/amt-01-ufo-investigation/issues/new/choose) and link the exact passage or source.
+- **An analysis:** follow [the relevant format below](#choose-the-right-contribution-format), with inputs, assumptions, and limits.
+- **Code or documentation changes:** make a pull request, run the [relevant validation](#validation), and include [DCO sign-off](#repository-licenses-and-inbound-contributions) on each commit.
+
+The sections below are the reference for preparing and reviewing a submission. They preserve the same source, privacy, licensing, and review requirements for every contribution.
+
+## What makes a useful contribution
+
 Thank you for helping examine an unresolved witness record with care. Contributions are judged by provenance, clarity, reproducibility, uncertainty handling, and respect. They are not judged by whether they favor a conventional or extraordinary explanation.
 
 AMT-01 begins with one retrospective first-person account. It has no known event photograph or video, independent witness record, sensor confirmation, recovered exact site, or instrumented geometry. A contribution can improve the record or analysis, but it cannot turn missing evidence into confirmation.
