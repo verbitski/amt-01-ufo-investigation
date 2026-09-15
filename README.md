@@ -1,119 +1,84 @@
-# AMT-01: An Open Investigation
+# AMT-01: What did I see?
 
-**Project website:** https://amt01.vercel.app/
+In summer 2004, near the Antalya coast, I saw a dark triangular object move past at close range. I still do not know what it was. This open project shares my account, reconstructions from memory, and work to check possible explanations.
 
-**Research repository:** https://github.com/verbitski/amt-01-ufo-investigation
+[![Later reconstruction of a dark triangular form above a beach. Not an event photograph.](site/assets/amt01-reconstruction-hero-v2-960.jpg)](https://amt01.vercel.app/#reconstructions)
 
-AMT-01 is a witness-led research project built around one unresolved observation near the Antalya coast in summer 2004.
+**Reconstruction from memory — not event media.** Shape, scale, lighting, and setting are approximate.
 
-I use **UFO** in its literal sense: I have not identified what I saw. The term does not claim extraterrestrial origin, extraordinary technology, or any particular explanation.
+**[Explore the reconstructions](https://amt01.vercel.app/#reconstructions)** · [Read the short account](docs/01-case-amt01/00-case-summary.md) · [Help with one small task](docs/06-research-program/03-first-contributions.md)
 
-The purpose is not to declare what the object was. The purpose is to preserve what I remember, separate memory from later estimates and calculations, compare possible explanations under the same rules, and leave an auditable record that other people and future analytical systems can examine.
+## Help with one question
 
-## Evidence boundary
+You do not need a complete explanation to help. Pick one:
 
-This project begins with a single retrospective witness record.
+| Task | A useful contribution |
+|---|---|
+| [Check the speed estimate](docs/06-research-program/03-first-contributions.md#check-the-speed-estimate) | Reproduce the arithmetic and show how changing an estimate affects the result. |
+| [Compare one known object](docs/06-research-program/03-first-contributions.md#compare-one-known-object) | Link a dated source for a candidate, explain one fit and one mismatch. |
+| [Make one detail clearer](docs/06-research-program/03-first-contributions.md#make-one-detail-clearer) | Point to an unclear sentence or broken link and propose a specific correction. |
 
-- No known photograph or video of the event is available to the project.
-- No sensor measurement of the event is available to the project.
-- No independent witness record is currently available to the project.
-- The exact day, month, site, geometry, distance, altitude, speed, and dimensions were not instrumentally established.
-- Every website image is a later reconstruction, not event media.
+[Discuss an idea on Discord](https://discord.gg/JVvHf5cXhs). For a research or code submission, follow the [contribution guide](CONTRIBUTING.md).
 
-The record can support structured questions and conditional analysis. It cannot by itself establish the object's identity, origin, construction, or physical mechanism.
+## What we have — and what we do not
 
-## What I remember
+The project begins with one retrospective witness record, a later sketch, corrections, and visual reconstructions. No known event photograph or video, independent witness record, or sensor measurement is available. The exact date, site, distance, dimensions, and speed were not established by instruments.
 
-I recall a dark, matte, elongated triangular form moving slowly past at close range. Its flat-looking underside carried several sharply bounded irregular regions that appeared completely black to me, without visible internal reflection. I remember no obvious sound, exhaust, glow, downwash, or visible means of propulsion.
+The object remains unidentified. “UFO” here does not claim an extraterrestrial origin. Calculations are conditional on later estimates, and [ordinary and perceptual explanations remain open](docs/03-hypotheses/01-evaluated-alternatives.md).
 
-The current retrospective estimates are:
+**Have an observation of your own?** Use the [private witness form](https://tally.so/r/5BgZMb), not a public issue or Discord post. New reports may omit a name and contact details, and are never published automatically. The form also handles privacy requests. See [privacy](PRIVACY.md) and [consent and takedown](CONSENT_AND_TAKEDOWN.md) before submitting.
 
-- event period: summer 2004, with the exact day and month unknown;
-- time in view: roughly 12 to 15 seconds;
-- closest lateral distance from the object's path: roughly 15 to 20 metres;
-- height above the local ground or water: roughly 4 to 5 metres;
-- object dimensions: roughly 6 to 8 metres long and 2.5 to 3 metres wide at the rear;
-- completely black underside regions: roughly 5 to 7, with exact topology uncertain.
+## Explore the research
 
-These are remembered or later estimated values, not measurements. Earlier records containing an unknown year, a 10 to 15 metre proximity estimate, or a 5 to 10 region estimate remain traceable through the correction history.
+- **The account:** [full witness record](docs/01-case-amt01/01-full-observation-record.md), [uncertainties](docs/01-case-amt01/03-uncertainty-register.md), and [memory and correction timeline](docs/01-case-amt01/04-memory-and-correction-timeline.md).
+- **The analysis:** [geometry and speed](docs/02-derived-analysis/00-geometric-and-kinematic-analysis.md), [hypothesis registry](docs/03-hypotheses/00-hypothesis-registry.md), and [comparison notes](docs/03-hypotheses/01-evaluated-alternatives.md).
+- **The record:** [claim ledger](docs/00-foundation/02-claim-ledger.md), [decision history](docs/07-reference/02-decision-log.md), and [legacy decision-ID map](docs/07-reference/05-legacy-decision-id-map.md).
 
-## Start here
-
-1. [Case summary](docs/01-case-amt01/00-case-summary.md)
-2. [Full witness record](docs/01-case-amt01/01-full-observation-record.md)
-3. [Uncertainty register](docs/01-case-amt01/03-uncertainty-register.md)
-4. [Memory and correction timeline](docs/01-case-amt01/04-memory-and-correction-timeline.md)
-5. [Claim ledger](docs/00-foundation/02-claim-ledger.md)
-6. [Hypothesis registry](docs/03-hypotheses/00-hypothesis-registry.md)
-7. [Decision log](docs/07-reference/02-decision-log.md)
-8. [Legacy decision-ID map](docs/07-reference/05-legacy-decision-id-map.md)
-
-The public website is in [`site/`](site/). The machine-readable prototype and schema are in [`data/`](data/) and [`schemas/`](schemas/).
-
-## How the repository is organized
+<details>
+<summary>Repository structure and research labels</summary>
 
 ```text
-docs/00-foundation/          Method, claim types, and canonical claim ledger
-docs/01-case-amt01/          Witness record, sketch notes, uncertainty, corrections
-docs/02-derived-analysis/    Conditional calculations and sensitivity questions
-docs/03-hypotheses/          Conventional, perceptual, and exploratory alternatives
-docs/04-speculative-models/  Clearly separated speculative engineering abstractions
-docs/05-external-evidence/   Provisional comparison material and source protocol
-docs/06-research-program/    Safe research questions and work packages
-docs/07-reference/           Decisions, references, glossary, and change history
-data/                        Machine-readable migration fixture
+docs/00-foundation/          Method and claim ledger
+docs/01-case-amt01/          Witness record, uncertainty, corrections
+docs/02-derived-analysis/    Conditional calculations
+docs/03-hypotheses/          Explanations and comparison notes
+docs/04-speculative-models/  Separate speculative thought models
+docs/05-external-evidence/   Comparison sources and source protocol
+docs/06-research-program/    Questions, starter tasks, work packages
+docs/07-reference/          Decisions, references, glossary, history
+data/                        Machine-readable migration prototype
 schemas/                     Versioned schema prototype
 site/                        Static public website
 templates/                   Record templates
-tools/                       Dependency-free validation tools
+tools/                       Validation tools
 ```
 
-## Statement types
+The record distinguishes `OBS` (recollection), `EST` (later estimate), `DER` (calculation), `INF` (interpretation), `HYP` (explanation to test), `EXT` (external claim), `DEC` (decision), and `UNK` (unknown). These labels describe a statement's source and role, not its proof strength.
 
-The internal record uses compact labels to prevent different kinds of statements from being blended:
+Force Skin, MEVE, Q-MEVE, transmedium, and warp-related documents remain separate [speculative models](docs/04-speculative-models/README.md), not established explanations.
 
-- `OBS`: what the witness recalls noticing;
-- `EST`: a later estimate with a stated basis;
-- `DER`: a calculation derived from identified inputs;
-- `INF`: an interpretation;
-- `HYP`: a testable possible explanation;
-- `EXT`: a claim from an external source;
-- `DEC`: a documented project decision;
-- `UNK`: something not known or not measured.
+</details>
 
-These labels describe provenance and reasoning role. They are not proof grades.
+## Project status and review
 
-## Hypotheses and speculative models
+The initial public release is `v0.1.0`. The dataset is a migration prototype, not a complete multi-case corpus. Some comparison sources, calculations, and original media-production details still need independent review. Public reconstruction assets have release hashes, lineage, rights information, and embedded disclosures.
 
-Conventional, perceptual, environmental, and extraordinary possibilities remain open to evidence-based review. A mechanism may be incompatible with a stated set of estimates without being eliminated for all possible conditions.
+AI assistance is disclosed under the [AI-use policy](AI_USE_POLICY.md). AI output is not a witness, original source, or independent verifier. Accepting a contribution records its sources and review status; it does not authenticate the event or endorse an explanation.
 
-Force Skin, MEVE, Q-MEVE, transmedium, and warp-related documents are retained as speculative requirements or thought models. They are not established explanations for AMT-01 and are kept in a separate [speculative-model area](docs/04-speculative-models/README.md).
+Project responsibilities are in [governance](GOVERNANCE.md). See the [code of conduct](CODE_OF_CONDUCT.md), [support routes](SUPPORT.md), and [rights and attribution](RIGHTS_AND_ATTRIBUTION.md) when relevant to your contribution.
 
-## Reconstructions and AI use
+## Run the website locally
 
-The website illustrations were created after the event to communicate the remembered scene. They are not additional evidence and may be wrong in scale, perspective, lighting, geometry, placement, and environmental detail.
+The website is plain HTML, CSS, and JavaScript. No dependency installation or build step is needed.
 
-AI may assist with organization, drafting, search, code, calculations, and visualization. AI output is never treated as a witness, original source, or independent verifier. Material claims and quotations require human checking against their sources.
+```bash
+python3 -m http.server 4173 --directory site
+```
 
-## Current release status
+Open [localhost:4173](http://localhost:4173). The public site is [amt01.vercel.app](https://amt01.vercel.app/); Vercel deploys `site/` from `main`. See [website setup](site/README.md) for deployment settings.
 
-The initial public release is `v0.1.0`. The current structured dataset is a migration prototype, not a complete multi-case research corpus. Some comparison sources, calculations, and original media-production details still require independent review. Public reconstruction files nevertheless have complete release hashes, lineage, rights status, and baked non-event-media disclosures.
-
-## Participation boundary
-
-Public discussion is available through the project Discord linked from the website. Do not post raw witness reports, identifying information, exact private locations, faces, voices, location metadata, or sensitive media in Discord or public GitHub issues.
-
-The consent-based [Tally witness-intake form](https://tally.so/r/5BgZMb) hosts and stores private responses for the project, with project-level access limited to the project steward acting as private-intake curator. The privacy contact is [werbitsky@gmail.com](mailto:werbitsky@gmail.com). Name and ordinary follow-up contact are optional for a new report; rights requests require a response email. Uploads are optional, limited to five files of 10 MB each, and restricted to images, video, audio, PDF, and plain text. Use a general location rather than a precise private location. A submission is private by default and is not automatically published or accepted into a dataset. The same form provides access, copy, correction, consent-withdrawal, deletion, and other privacy-request routes. See [PRIVACY.md](PRIVACY.md) and [CONSENT_AND_TAKEDOWN.md](CONSENT_AND_TAKEDOWN.md).
-
-## Contributing and governance
-
-Start with [CONTRIBUTING.md](CONTRIBUTING.md). It explains useful contribution routes, evidence labels, source traceability, DCO sign-off, AI disclosure, media rights, the witness-record boundary, and validation.
-
-Project roles and decision authority are defined in [GOVERNANCE.md](GOVERNANCE.md). Community participation is governed by [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Privacy, consent, takedown, security, AI use, and support routes are documented separately so contributors do not have to infer them from discussion.
-
-Accepting a contribution means it has been catalogued with its stated provenance, license, uncertainty, and review status. It does not authenticate the event or endorse a proposed explanation.
-
-## Validation
+<details>
+<summary>Repository validation commands</summary>
 
 Run the current machine-readable fixture check from the repository root:
 
@@ -132,30 +97,7 @@ node --check site/script.js
 node --check site/site-config.js
 ```
 
-## Public website
-
-The public project website is live at [amt01.vercel.app](https://amt01.vercel.app/). It presents the witness account, uncertainty boundary, reconstruction gallery, reverse-engineering framework, community routes, and private witness-intake entry point.
-
-This repository is the source and auditable research record behind the website. Vercel deploys the contents of [`site/`](site/) from the repository's `main` branch.
-
-### Preview locally
-
-Preview the website from the repository root:
-
-```bash
-python3 -m http.server 4173 --directory site
-```
-
-### Vercel configuration for maintainers
-
-The production project uses these settings:
-
-- Root Directory: `site`
-- Framework Preset: `Other`
-- Build Command: leave blank
-- Output Directory: `.`
-
-The website is plain HTML, CSS, and JavaScript, so it requires no dependency installation or build step. [`site/vercel.json`](site/vercel.json) supplies clean URLs and restrictive browser-security headers. Setting the Vercel root to `site` also prevents repository documentation and internal research files from being published as website paths.
+</details>
 
 ## Licensing
 

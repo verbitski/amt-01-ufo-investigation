@@ -64,6 +64,9 @@
     if (event.target.closest('a')) closeNavigation();
   });
 
+  // A mobile menu must not leave desktop scrolling locked after a resize.
+  window.matchMedia('(max-width: 700px)').addEventListener?.('change', closeNavigation);
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && nav?.classList.contains('is-open')) {
       closeNavigation();
@@ -111,6 +114,7 @@
   openDialog?.addEventListener('click', showProvenance);
   closeDialog?.addEventListener('click', hideProvenance);
   dialog?.addEventListener('click', (event) => {
+    if (event.target !== dialog) return;
     const bounds = dialog.getBoundingClientRect();
     const outside = event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom;
     if (outside) hideProvenance();
@@ -122,26 +126,64 @@
   const galleryTitle = document.querySelector('[data-gallery-title]');
   const galleryCaption = document.querySelector('[data-gallery-caption]');
   const galleryClose = document.querySelector('[data-gallery-close]');
+  const galleryTriggers = [...document.querySelectorAll('[data-gallery-open]')];
+  const galleryPrevious = document.querySelector('[data-gallery-prev]');
+  const galleryNext = document.querySelector('[data-gallery-next]');
+  const galleryCount = document.querySelector('[data-gallery-count]');
+  const galleryStatus = document.querySelector('[data-gallery-status]');
+  const galleryMedia = document.querySelector('[data-gallery-media]');
+  const galleryOriginal = document.querySelector('[data-gallery-original]');
   let galleryReturnFocus = null;
+  let galleryIndex = 0;
+
+  function finishGalleryLoad(failed = false) {
+    if (!galleryDialog?.open || !galleryImage) return;
+    galleryMedia?.setAttribute('aria-busy', 'false');
+    galleryImage.hidden = failed;
+    if (galleryStatus) {
+      galleryStatus.hidden = !failed;
+      galleryStatus.textContent = failed
+        ? 'This image could not load. Try “Open full image” below, or choose another view.'
+        : '';
+    }
+  }
+
+  function loadGalleryImage(index) {
+    const trigger = galleryTriggers[index];
+    if (!trigger || !galleryImage) return;
+    galleryIndex = index;
+    const figure = trigger.closest('figure');
+    const sourceImage = trigger.querySelector('img');
+    galleryImage.hidden = true;
+    galleryMedia?.setAttribute('aria-busy', 'true');
+    if (galleryStatus) {
+      galleryStatus.hidden = false;
+      galleryStatus.textContent = 'Loading reconstruction…';
+    }
+    galleryImage.alt = sourceImage?.alt ?? '';
+    if (galleryTitle) galleryTitle.textContent = figure?.querySelector('h3')?.textContent ?? 'Reconstruction preview';
+    if (galleryCaption) galleryCaption.textContent = figure?.querySelector('figcaption > p')?.textContent ?? '';
+    if (galleryCount) galleryCount.textContent = `${index + 1} of ${galleryTriggers.length}`;
+    if (galleryOriginal) galleryOriginal.href = trigger.href;
+    const focusedControl = document.activeElement;
+    if (galleryPrevious) galleryPrevious.disabled = index === 0;
+    if (galleryNext) galleryNext.disabled = index === galleryTriggers.length - 1;
+    if (focusedControl === galleryNext && galleryNext?.disabled) galleryPrevious?.focus();
+    if (focusedControl === galleryPrevious && galleryPrevious?.disabled) galleryNext?.focus();
+    galleryImage.src = trigger.href;
+    if (galleryImage.complete) finishGalleryLoad(galleryImage.naturalWidth === 0);
+  }
 
   function showGalleryPreview(event) {
     if (!galleryDialog || typeof galleryDialog.showModal !== 'function') return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
     event.preventDefault();
     const trigger = event.currentTarget;
-    const figure = trigger.closest('figure');
-    const sourceImage = trigger.querySelector('img');
-    const heading = figure?.querySelector('h4');
-    const caption = figure?.querySelector('figcaption > p');
-
     if (!galleryImage || !trigger.href) return;
-
     galleryReturnFocus = trigger;
-    galleryImage.src = trigger.href;
-    galleryImage.alt = sourceImage?.alt ?? '';
-    if (galleryTitle) galleryTitle.textContent = heading?.textContent ?? 'Reconstruction preview';
-    if (galleryCaption) galleryCaption.textContent = caption?.textContent ?? '';
     galleryDialog.showModal();
+    loadGalleryImage(galleryTriggers.indexOf(trigger));
     galleryClose?.focus();
   }
 
@@ -149,19 +191,38 @@
     if (galleryDialog?.open) galleryDialog.close();
   }
 
-  document.querySelectorAll('[data-gallery-open]').forEach((trigger) => {
+  galleryTriggers.forEach((trigger) => {
     trigger.addEventListener('click', showGalleryPreview);
+  });
+
+  galleryImage?.addEventListener('load', () => finishGalleryLoad());
+  galleryImage?.addEventListener('error', () => finishGalleryLoad(true));
+  galleryPrevious?.addEventListener('click', () => loadGalleryImage(galleryIndex - 1));
+  galleryNext?.addEventListener('click', () => loadGalleryImage(galleryIndex + 1));
+  galleryDialog?.addEventListener('keydown', (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      loadGalleryImage(galleryIndex + (event.key === 'ArrowLeft' ? -1 : 1));
+    }
   });
 
   galleryClose?.addEventListener('click', hideGalleryPreview);
   galleryDialog?.addEventListener('click', (event) => {
+    // A view change can resize the dialog during this click. Only backdrop
+    // clicks may dismiss it; never interpret a child control as the backdrop.
+    if (event.target !== galleryDialog) return;
     const bounds = galleryDialog.getBoundingClientRect();
     const outside = event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom;
     if (outside) hideGalleryPreview();
   });
   galleryDialog?.addEventListener('close', () => {
     galleryReturnFocus?.focus();
-    if (galleryImage) galleryImage.src = '';
+    if (galleryImage) {
+      galleryImage.hidden = true;
+      galleryImage.removeAttribute('src');
+    }
+    galleryMedia?.setAttribute('aria-busy', 'false');
   });
 
   document.querySelectorAll('[data-year]').forEach((node) => {
@@ -226,58 +287,4 @@
     if (copy) note.textContent = copy;
   });
 
-  const communityStatusTitle = document.querySelector('[data-community-status-title]');
-  const communityStatusText = document.querySelector('[data-community-status-text]');
-  const communityHelpCopy = document.querySelector('[data-community-help-copy]');
-  const communityHelpLabel = document.querySelector('[data-community-help-label]');
-  const communityPublicWarning = document.querySelector('[data-community-public-warning]');
-  const discussionsAreOpen = Boolean(linkAvailability.discussions);
-  const contributionsAreOpen = Boolean(linkAvailability.repository);
-  const privateIntakeIsOpen = Boolean(linkAvailability.privateIntake);
-  const anyPublicRouteIsOpen = discussionsAreOpen || contributionsAreOpen;
-  const anyParticipationIsOpen = discussionsAreOpen || contributionsAreOpen || privateIntakeIsOpen;
-
-  if (communityPublicWarning) communityPublicWarning.hidden = !anyPublicRouteIsOpen;
-
-  if (anyParticipationIsOpen && communityStatusTitle && communityStatusText) {
-    if (privateIntakeIsOpen && anyPublicRouteIsOpen) {
-      if (discussionsAreOpen && contributionsAreOpen) {
-        communityStatusTitle.textContent = 'Public discussion, research contributions, and private witness intake are open.';
-      } else if (discussionsAreOpen) {
-        communityStatusTitle.textContent = 'Public discussion and private witness intake are open.';
-      } else {
-        communityStatusTitle.textContent = 'Research contributions and private witness intake are open.';
-      }
-    } else if (discussionsAreOpen && contributionsAreOpen) {
-      communityStatusTitle.textContent = 'Public discussion and research contributions are open.';
-    } else if (discussionsAreOpen) {
-      communityStatusTitle.textContent = 'Public discussion is open.';
-    } else if (contributionsAreOpen) {
-      communityStatusTitle.textContent = 'Structured research contributions are open.';
-    } else {
-      communityStatusTitle.textContent = 'Private witness intake is open.';
-    }
-
-    communityStatusText.textContent = privateIntakeIsOpen
-      ? 'Use public channels for discussion and checkable research. Use the private form for witness reports or sensitive details. Reports are reviewed privately and are never published automatically.'
-      : 'The private witness form is temporarily unavailable. Please do not send personal reports or media through public channels.';
-
-    if (communityHelpCopy) {
-      communityHelpCopy.textContent = anyPublicRouteIsOpen && privateIntakeIsOpen
-        ? 'Ready to join a public discussion, contribute something checkable, or use the separate private route?'
-        : anyPublicRouteIsOpen
-          ? 'Ready to join an available public discussion or contribute something checkable?'
-          : 'A separate private route is available for witness reports.';
-    }
-    if (communityHelpLabel) communityHelpLabel.textContent = 'Choose how to take part';
-  }
-
-  if (privateIntakeIsOpen) {
-    const privateIntakeLabel = document.querySelector('[data-private-intake-label]');
-    const privateIntakeTitle = document.querySelector('[data-private-intake-title]');
-    const privateIntakeCopy = document.querySelector('[data-private-intake-copy]');
-    if (privateIntakeLabel) privateIntakeLabel.textContent = 'Private, consent-based intake';
-    if (privateIntakeTitle) privateIntakeTitle.textContent = 'Share an observation privately';
-    if (privateIntakeCopy) privateIntakeCopy.textContent = 'Use this route for a witness report, sensitive details, or an access, copy, correction, consent-withdrawal, deletion, or other privacy request. Submissions are reviewed privately and are not published automatically. You may submit a new report without a name or follow-up contact.';
-  }
 })();
